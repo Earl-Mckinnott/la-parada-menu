@@ -53,6 +53,16 @@ menuButtons.forEach(button => {
         document.body.classList.remove('ensaladas-open');
       }
 
+      // desayuno menu page block
+      if (targetId === 'desayuno') {
+        targetPage.classList.add('desayuno-bg');
+        setTimeout(() => {
+          targetPage.classList.add('fade-in');
+        }, 50);
+      } else {
+        targetPage.classList.remove('desayuno-bg', 'fade-in');
+      }
+
       if (targetId === 'antojitos') {
         const banner = document.getElementById('antojitos-banner');
         if (banner) {
@@ -74,15 +84,14 @@ menuButtons.forEach(button => {
 backButtons.forEach(button => {
   button.addEventListener('click', () => {
     menuPages.forEach(page => {
-      page.classList.remove('active');
-      page.classList.remove('ensaladas-bg', 'fade-in');
+      page.classList.remove('active', 'ensaladas-bg', 'desayuno-bg', 'fade-in');
     });
     const banner = document.getElementById('antojitos-banner');
     if (banner) {
       banner.classList.remove('active');
     }
     document.body.classList.remove('antojitos-open');
-    menuPages.forEach(page => page.classList.remove('ensaladas-bg', 'fade-in'));
+    menuPages.forEach(page => page.classList.remove('ensaladas-bg', 'desayuno-bg', 'fade-in'));
     document.body.classList.remove('ensaladas-open');
     document.body.style.overflow = ''; // ✅ re-enable scrolling
   });
@@ -136,7 +145,7 @@ document.addEventListener('click', (e) => {
     if (banner) {
       banner.classList.remove('active');
     }
-    menuPages.forEach(page => page.classList.remove('ensaladas-bg', 'fade-in'));
+    menuPages.forEach(page => page.classList.remove('ensaladas-bg', 'desayuno-bg', 'fade-in'));
     document.body.classList.remove('antojitos-open');
     document.body.classList.remove('ensaladas-open');
     document.body.style.overflow = ''; // ✅ re-enable scrolling

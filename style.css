@@ -167,8 +167,8 @@ body.menu-view #main-nav {
   transform: translateX(-50%) translateY(2rem);
   pointer-events: none;
   position: fixed;
-  top: -4.7rem;
-  left: 72%;
+  top: -4.5rem;
+  left: 73%;
   width: 55%;
   max-width: 65%;
   z-index: 30;
@@ -218,6 +218,36 @@ body.antojitos-open #antojitos-banner {
   z-index: -1;
   transition: background 1s ease-in-out;
 }
+
+/* Desayuno menu Background */
+.menu-page.desayuno-bg {
+  background-image: url('images/flag.png');
+  background-size: 100%;
+  background-position: center -80px;
+  background-repeat: no-repeat;
+  color: rgb(255, 234, 0);
+  z-index: 1;
+}
+
+.menu-page.desayuno-bg .item-name,
+.menu-page.desayuno-bg .item-price {
+  color: rgb(0, 0, 0);
+}
+
+.menu-page.desayuno-bg::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: inherit;
+  background-size: 100%;
+  background-position: center -80px;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.5); /* dark overlay for readability */
+  z-index: -1;
+  transition: background 1s ease-in-out;
+}
+
 
 
 /* MENU CONTENT STYLE */

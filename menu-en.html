@@ -7,6 +7,7 @@
         <meta name="description" content="La Parada Del Sabor - Restaurante dominicano en Allentown, PA. Menu, historia, contacto y más.">
 <meta name="keywords" content="La Parada Del Sabor, restaurante dominicano, Allentown, comida latina, menú dominicano">
 <meta name="author" content="La Parada Del Sabor">
+<link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css" />
   <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -16,6 +17,15 @@
     </head>
 
     <body class="menu-view">
+
+      <!-- Preload Images -->
+ <div style="display: none;">
+  <img src="images/ensaladas-banner.png" alt="Preload Ensaladas Banner">
+ </div>
+
+
+
+
         <!-- Language Toggle -->
          <div id="language-toggle">
   <a href="menu.html" class="lang-btn">ES</a>
@@ -46,6 +56,7 @@
             <p class="location-text">102 W Susquehanna St, Allentown, PA</p>
 <div class="location-underline"></div>
           </header>
+          
           <!-- Main Navigation -->
            <nav id="main-nav">
             <ul>
@@ -60,24 +71,25 @@
 
             <!-- Menu Section PH -->
              <section id="menu">
-                <h2>Menu</h2>
+                <h2 class="menu-heading">Menu</h2>
                 <!-- Subcategory Navigation -->
 <div class="menu-nav-container">
 <div class="menu-nav">
-  <button class="menu-btn" data-target="antojitos">Cravings</button>
-  <button class="menu-btn" data-target="ensaladas">Salad</button>
-  <button class="menu-btn" data-target="desayuno">Breakfast</button>
-  <button class="menu-btn" data-target="almuerzo">Lunch</button>
-  <button class="menu-btn" data-target="carnes">Meats</button>
-  <button class="menu-btn" data-target="mariscos">Seafood</button>
-  <button class="menu-btn" data-target="sandwiches">Sándwiches</button>
-  <button class="menu-btn" data-target="sopas">Soups</button>
-  <button class="menu-btn" data-target="bebidas">Drinks</button>
-  <button class="menu-btn" data-target="picaderas">Picaderas</button>
+  <button class="menu-btn menu-nav-left" data-target="antojitos">Cravings</button>
+  <button class="menu-btn menu-nav-right" data-target="ensaladas">Salad</button>
+  <button class="menu-btn menu-nav-left" data-target="desayuno">Breakfast</button>
+  <button class="menu-btn menu-nav-right" data-target="almuerzo">Lunch</button>
+  <button class="menu-btn menu-nav-left" data-target="carnes">Meats</button>
+  <button class="menu-btn menu-nav-right" data-target="mariscos">Seafood</button>
+  <button class="menu-btn menu-nav-left" data-target="sandwiches">Sándwiches</button>
+  <button class="menu-btn menu-nav-right" data-target="sopas">Soups</button>
+  <button class="menu-btn menu-nav-left" data-target="bebidas">Drinks</button>
+  <button class="menu-btn menu-nav-right" data-target="picaderas">Picaderas</button>
 </div>
 
 <!-- Subcategory Pages (Hidden by Default) -->
   <div class="menu-content-wrapper">
+         <img id="antojitos-banner" src="images/antojitos-banner.png" alt="Antojitos Banner">
     <div class="menu-page" id="antojitos">
       <button class="back-btn">← Back</button>
                 <!-- Antojitos -->
@@ -95,7 +107,8 @@
   </ul>
 </div>
 
-  <!-- Ensaladas -->
+  
+<!-- Ensaladas -->
  <div class="menu-page" id="ensaladas">
       <button class="back-btn">← Back</button>
   <h3>Salad</h3>
@@ -252,6 +265,7 @@
       <li> <span class = "item-name">Big</span>
         <span class="item-price">$80.00</span></li>
     </ul>
+  </div>
   </div>
              </section>
 
