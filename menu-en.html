@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset ="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Menu - La Parada Del Sabor</title>
+        <meta name="description" content="La Parada Del Sabor - Restaurante dominicano en Allentown, PA. Menu, historia, contacto y más.">
+<meta name="keywords" content="La Parada Del Sabor, restaurante dominicano, Allentown, comida latina, menú dominicano">
+<meta name="author" content="La Parada Del Sabor">
+        <link rel="stylesheet" href="style.css" />
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("js-loaded");
+    });
+  </script>
+    </head>
+
+    <body class="menu-view">
+        <!-- Language Toggle -->
+         <div id="language-toggle">
+  <a href="menu.html" class="lang-btn">ES</a>
+  <a href="menu-en.html" class="lang-btn active">EN</a>
+</div>
+
+
+         <!-- Hero Section -->
+          <header id="hero">
+            
+            <div id="logo">
+  <a href="index.html" class="logo-clickable">
+    <span class="logo-line">La Parada</span>
+    <span class="logo-small">del</span>
+  </a>
+
+  <svg viewBox="0 0 350 150" width="350" height="160" class="logo-curve">
+    <defs>
+      <path id="curvePath" d="M 10 30 Q 175 100 340 30" fill="transparent"/>
+    </defs>
+    <text width="300">
+      <textPath href="#curvePath" startOffset="50%" text-anchor="middle" class="logo-big-svg">
+        SABOR
+      </textPath>
+    </text>
+  </svg>
+</div>
+            <p class="location-text">102 W Susquehanna St, Allentown, PA</p>
+<div class="location-underline"></div>
+          </header>
+          <!-- Main Navigation -->
+           <nav id="main-nav">
+            <ul>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="jobs.html">Join Us</a></li>
+            </ul>
+           </nav>
+
+
+
+            <!-- Menu Section PH -->
+             <section id="menu">
+                <h2>Menu</h2>
+                <!-- Subcategory Navigation -->
+<div class="menu-nav-container">
+<div class="menu-nav">
+  <button class="menu-btn" data-target="antojitos">Cravings</button>
+  <button class="menu-btn" data-target="ensaladas">Salad</button>
+  <button class="menu-btn" data-target="desayuno">Breakfast</button>
+  <button class="menu-btn" data-target="almuerzo">Lunch</button>
+  <button class="menu-btn" data-target="carnes">Meats</button>
+  <button class="menu-btn" data-target="mariscos">Seafood</button>
+  <button class="menu-btn" data-target="sandwiches">Sándwiches</button>
+  <button class="menu-btn" data-target="sopas">Soups</button>
+  <button class="menu-btn" data-target="bebidas">Drinks</button>
+  <button class="menu-btn" data-target="picaderas">Picaderas</button>
+</div>
+
+<!-- Subcategory Pages (Hidden by Default) -->
+  <div class="menu-content-wrapper">
+    <div class="menu-page" id="antojitos">
+      <button class="back-btn">← Back</button>
+                <!-- Antojitos -->
+ 
+  <h3>Cravings</h3>
+  <ul>
+    <li><span class="item-name">Chicken and Cheese Pastelito</span><span class="item-price">$2.00</span></li>
+    <li><span class="item-name">Chicken Pastelito</span><span class="item-price">$2.00</span></li>
+    <li><span class="item-name">Beef and Cheese Pastelito</span><span class="item-price">$2.00</span></li>
+    <li><span class="item-name">Beef Pastelito</span><span class="item-price">$2.00</span></li>
+    <li><span class="item-name">Cheese Pastelito</span><span class="item-price">$2.00</span></li>
+    <li><span class="item-name">Green Banana Alcapurria</span><span class="item-price">$2.50</span></li>
+    <li><span class="item-name">Yuca (Casava) Alcapurria</span><span class="item-price">$2.50</span></li>
+    <li><span class="item-name">Potato Ball</span><span class="item-price">$2.50</span></li>
+  </ul>
+</div>
+
+  <!-- Ensaladas -->
+ <div class="menu-page" id="ensaladas">
+      <button class="back-btn">← Back</button>
+  <h3>Salad</h3>
+  <ul>
+    <li><span class="item-name">Leaf (Green)</span><span class="item-price">$4.00</span></li>
+    <li><span class="item-name">Potato</span><span class="item-price">$4.00</span></li>
+    <li><span class="item-name">Elbow (Pasta)</span><span class="item-price">$4.00</span></li>
+    <li><span class="item-name">Shrimp</span><span class="item-price">$14.00</span></li>
+    <li><span class="item-name">Octopus</span><span class="item-price">$16.00</span></li>
+    <li><span class="item-name">Chicken</span><span class="item-price">$13.00</span></li>
+  </ul>
+</div>
+
+  <!-- Desayuno -->
+<div class="menu-page" id="desayuno">
+  <button class="back-btn">← Back</button>
+  <h3>Breakfast</h3>
+  <ul>
+    <li><span class="item-name">3 Sides & Mangu</span><span class="item-price">$9.00</span></li>
+    <li><span class="item-name">4 Sides & Mangu</span><span class="item-price">$10.00</span></li>
+    <li><span class="item-name">5 Sides & Mangu</span><span class="item-price">$11.00</span></li>
+    <li><span class="item-name">6 Sides & Mangu</span><span class="item-price">$12.00</span></li>
+  </ul>
+</div>
+
+  <!-- Almuerzo -->
+<div class="menu-page" id="almuerzo">
+  <button class="back-btn">← Back</button>
+  <h3>Lunch Specials</h3>
+  <ul>
+    <li><span class="item-name">Chicken</span><span class="item-price">$8.00</span></li>
+    <li><span class="item-name">Beef Stew</span><span class="item-price">$9.00</span></li>
+    <li><span class="item-name">Ribs</span><span class="item-price">$9.00</span></li>
+    <li><span class="item-name">Pernil (Pork)</span><span class="item-price">$9.00</span></li>
+    <li><span class="item-name">Oxtail</span><span class="item-price">$13.00</span></li>
+    <li><span class="item-name">Peppered Chicken</span><span class="item-price">$9.00</span></li>
+    <li><span class="item-name">Grilled Chicken Breast</span><span class="item-price">$9.00</span></li>
+    <li><span class="item-name">Meatballs</span><span class="item-price">$9.00</span></li>
+    <li><span class="item-name">Goat</span><span class="item-price">$10.00</span></li>
+    <li><span class="item-name">Pork Chop</span><span class="item-price">$9.00</span></li>
+    <li><span class="item-name">Cod Fish</span><span class="item-price">$9.00</span></li>
+    <li><span class="item-name">Spagetti</span><span class="item-price">$9.00</span></li>
+  </ul>
+</div>
+
+  <!-- Carnes -->
+<div class="menu-page" id="carnes">
+  <button class="back-btn">← Back</button>
+  <h3>Solo Meats</h3>
+  <ul>
+    <li><span class="item-name">Onion Steak</span><span class="item-price">$14.00</span></li>
+    <li><span class="item-name">Peppered Steak</span><span class="item-price">$14.00</span></li>
+    <li><span class="item-name">Horseback Steak</span><span class="item-price">$16.00</span></li>
+    <li><span class="item-name">Breaded Steak</span><span class="item-price">$14.00</span></li>
+    <li><span class="item-name">Beef Stew</span><span class="item-price">$10.00</span></li>
+    <li><span class="item-name">Goat</span><span class="item-price">$12.00</span></li>
+    <li><span class="item-name">Oxtail</span><span class="item-price">$18.00</span></li>
+    <li><span class="item-name">Ribs</span><span class="item-price">$10.00</span></li>
+    <li><span class="item-name">Stew Chicken</span><span class="item-price">$8.00</span></li>
+    <li><span class="item-name">Fried Chicken (Boneless or Bone In)</span><span class="item-price">$10.00</span></li>
+    <li><span class="item-name">Chicken Breast</span><span class="item-price">$5.00</span></li>
+    <li><span class="item-name">Entire Chicken</span><span class="item-price">$14.00</span></li>
+    <li><span class="item-name">Half Chicken</span><span class="item-price">$7.00</span></li>
+    <li><span class="item-name">Breaded Chicken</span><span class="item-price">$10.00</span></li>
+    <li><span class="item-name">Peppered Chicken</span><span class="item-price">$10.00</span></li>
+    <li><span class="item-name">Grilled Chicken</span><span class="item-price">$10.00</span></li>
+    <li><span class="item-name">Small Pork</span><span class="item-price">$5.00</span></li>
+    <li><span class="item-name">Big Pork</span><span class="item-price">$10.00</span></li>
+    <li><span class="item-name">Pork Feet</span><span class="item-price">$10.00</span></li>
+  </ul>
+</div>
+
+  <!-- Mariscos -->
+<div class="menu-page" id="mariscos">
+  <button class="back-btn">← Back</button>
+  <h3>Seafood</h3>
+  <ul>
+    <li><span class="item-name">Tomato Sauce Shrimp</span><span class="item-price">$12.00</span></li>
+    <li><span class="item-name">Garlic Sauce Shrimp</span><span class="item-price">$12.00</span></li>
+    <li><span class="item-name">Fried Fish (Whole)</span><span class="item-price">$(preguntar)</span></li>
+    <li><span class="item-name">Fish in Sauce</span><span class="item-price">$12.00</span></li>
+    <li><span class="item-name">Fried Fish Filete</span><span class="item-price">$12.00</span></li>
+    <li><span class="item-name">Cod Stew</span><span class="item-price">$12.00</span></li>
+    <li><span class="item-name">Peppered Cod</span><span class="item-price">$12.00</span></li>
+  </ul>
+</div>
+
+  <!-- Sandwiches -->
+<div class="menu-page" id="sandwiches">
+  <button class="back-btn">← Back</button>
+  <h3>Sandwiches</h3>
+  <ul>
+    <li><span class="item-name">Cuban</span><span class="item-price">$7.00</span></li>
+    <li><span class="item-name">Chicken</span><span class="item-price">$5.00</span></li>
+    <li><span class="item-name">Steak</span><span class="item-price">$5.00</span></li>
+    <li><span class="item-name">Triplet</span><span class="item-price">$8.00</span></li>
+  </ul>
+</div>
+
+  <!-- Sopas -->
+<div class="menu-page" id="sopas">
+  <button class="back-btn">← Back</button>
+  <h3>Soup</h3>
+  <ul>
+    <li><span class="item-name">Sancocho (Dominican Stew)</span><span class="item-price">$10.00</span></li>
+    <li><span class="item-name">Sancocho (small)</span><span class="item-price">$6.00</span></li>
+    <li><span class="item-name">Chicken</span><span class="item-price">$8.00</span></li>
+    <li><span class="item-name">Chicken (small)</span><span class="item-price">$5.00</span></li>
+    <li><span class="item-name">Tripe</span><span class="item-price">$12.00</span></li>
+    <li><span class="item-name">Tripe (small)</span><span class="item-price">$6.00</span></li>
+    <li><span class="item-name">Seafood & Rice Stew</span><span class="item-price">$15.00</span></li>
+    <li><span class="item-name">Shrimp & Rice Stew</span><span class="item-price">$12.00</span></li>
+  </ul>
+</div>
+
+
+  <!-- Bebidas -->
+<div class="menu-page" id="bebidas">
+  <button class="back-btn">← Back</button>
+  <h3>Drinks</h3>
+
+  <h4>Home-made</h4>
+  <p class="menu-description">Big - $10.00 | Small - $5.00</p>
+  <ul>
+    <li><span class="item-name">Passionfruit</span></li>
+    <li><span class="item-name">Morir Sonando (Milk and Orange)</span></li>
+    <li><span class="item-name">Lime</span></li>
+    <li><span class="item-name">Tamarind</span></li>
+  </ul>
+
+  <h4>From the Fridge</h4>
+  <ul>
+    <li><span class="item-name">Bottles</span><span class="item-price">$2.00</span></li>
+    <li><span class="item-name">Cans</span><span class="item-price">$1.00</span></li>
+    <li><span class="item-name">2 Liter Soda</span><span class="item-price">$4.00</span></li>
+  </ul>
+
+  <h4>Hot</h4>
+  <ul>
+    <li><span class="item-name">Café Espresso</span><span class="item-price">$2.00</span></li>
+    <li><span class="item-name">Big Oatmeal</span><span class="item-price">$8.00</span></li>
+    <li><span class="item-name">Reg Oatmeal</span><span class="item-price">$4.00</span></li>
+  </ul>
+</div>
+  <!-- Picaderas -->
+  <div class="menu-page" id="picaderas">
+  <button class="back-btn">← Back</button>
+    <h3>Picaderas (Appetizer Trays)</h3>
+    <ul>
+      <li> <span class = "item-name">Small</span>
+        <span class = "item-price">$35.00</span></li>
+      <li><span class = "item-name">Medium</span>
+        <span class="item-price">$60.00</span></li>
+      <li> <span class = "item-name">Big</span>
+        <span class="item-price">$80.00</span></li>
+    </ul>
+  </div>
+             </section>
+
+
+                <script src="script.js"></script>
+
+    </body>
+</html>

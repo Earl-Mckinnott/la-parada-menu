@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset ="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Menu - La Parada Del Sabor</title>
+        <meta name="description" content="La Parada Del Sabor - Restaurante dominicano en Allentown, PA. Menu, historia, contacto y más.">
+<meta name="keywords" content="La Parada Del Sabor, restaurante dominicano, Allentown, comida latina, menú dominicano">
+<meta name="author" content="La Parada Del Sabor">
+<link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" />
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("js-loaded");
+    });
+  </script>
+    </head>
+
+    <body class="menu-view">
+        <!-- Language Toggle -->
+<div id="language-toggle">
+  <a href="menu.html" class="lang-btn active">ES</a>
+  <a href="menu-en.html" class="lang-btn">EN</a>
+</div>
+
+         <!-- Hero Section -->
+          <header id="hero">
+            
+            <div id="logo">
+  <a href="index.html" class="logo-clickable">
+    <span class="logo-line">La Parada</span>
+    <span class="logo-small">del</span>
+  </a>
+
+  <svg viewBox="0 0 350 150" width="350" height="160" class="logo-curve">
+    <defs>
+      <path id="curvePath" d="M 10 30 Q 175 100 340 30" fill="transparent"/>
+    </defs>
+    <text width="300">
+      <textPath href="#curvePath" startOffset="50%" text-anchor="middle" class="logo-big-svg">
+        SABOR
+      </textPath>
+    </text>
+  </svg>
+</div>
+            <p class="location-text">102 W Susquehanna St, Allentown, PA</p>
+<div class="location-underline"></div>
+          </header>
+
+          <!-- Main Navigation -->
+           <nav id="main-nav">
+            <ul>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">Nosotros</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="jobs.html">Unete al equipo</a></li>
+            </ul>
+           </nav>
+
+
+
+            <!-- Menu Section PH -->
+             <section id="menu">
+                <h2 class="menu-heading">Menu</h2>
+                <!-- Subcategory Navigation -->
+<div class="menu-nav-container">
+<div class="menu-nav">
+  <button class="menu-btn menu-nav-left" data-target="antojitos">Antojitos</button>
+  <button class="menu-btn menu-nav-right" data-target="ensaladas">Ensaladas</button>
+  <button class="menu-btn menu-nav-left" data-target="desayuno">Desayuno</button>
+  <button class="menu-btn menu-nav-right" data-target="almuerzo">Almuerzo</button>
+  <button class="menu-btn menu-nav-left" data-target="carnes">Carnes</button>
+  <button class="menu-btn menu-nav-right" data-target="mariscos">Mariscos</button>
+  <button class="menu-btn menu-nav-left" data-target="sandwiches">Sándwiches</button>
+  <button class="menu-btn menu-nav-right" data-target="sopas">Sopas</button>
+  <button class="menu-btn menu-nav-left" data-target="bebidas">Bebidas</button>
+  <button class="menu-btn menu-nav-right" data-target="picaderas">Picaderas</button>
+</div>
+
+<!-- Subcategory Pages (Hidden by Default) -->
+  <div class="menu-content-wrapper">
+     <img id="antojitos-banner" src="images/antojitos-banner.png" alt="Antojitos Banner">
+    <div class="menu-page" id="antojitos">
+      <button class="back-btn">← Volver</button>
+                <!-- Antojitos -->
+  <h3>Antojitos</h3>
+  <ul>
+    <li><span class="item-name">Pastelito de Pollo y Queso</span><span class="item-price">$2.00</span></li>
+    <li><span class="item-name">Pastelito de Pollo</span><span class="item-price">$2.00</span></li>
+    <li><span class="item-name">Pastelito de Carne y Queso</span><span class="item-price">$2.00</span></li>
+    <li><span class="item-name">Pastelito de Carne</span><span class="item-price">$2.00</span></li>
+    <li><span class="item-name">Pastelito de Queso</span><span class="item-price">$2.00</span></li>
+    <li><span class="item-name">Alcapurria de Guineo</span><span class="item-price">$2.50</span></li>
+    <li><span class="item-name">Alcapurria de Yuca</span><span class="item-price">$2.50</span></li>
+    <li><span class="item-name">Papa Rellena</span><span class="item-price">$2.50</span></li>
+  </ul>
+</div>
+
+  <!-- Ensaladas -->
+
+ <div class="menu-page" id="ensaladas">
+      <button class="back-btn">← Volver</button>
+  <h3>Ensaladas</h3>
+  <ul>
+    <li><span class="item-name">Verde</span><span class="item-price">$4.00</span></li>
+    <li><span class="item-name">De Papa</span><span class="item-price">$4.00</span></li>
+    <li><span class="item-name">De Codito</span><span class="item-price">$4.00</span></li>
+    <li><span class="item-name">De Camarones</span><span class="item-price">$14.00</span></li>
+    <li><span class="item-name">De Pulpo</span><span class="item-price">$16.00</span></li>
+    <li><span class="item-name">De Pollo</span><span class="item-price">$13.00</span></li>
+  </ul>
+</div>
+
+  <!-- Desayuno -->
+<div class="menu-page" id="desayuno">
+  <button class="back-btn">← Volver</button>
+  <h3>Desayuno</h3>
+  <ul>
+    <li><span class="item-name">3 Golpes de Mangu</span><span class="item-price">$9.00</span></li>
+    <li><span class="item-name">4 Golpes de Mangu</span><span class="item-price">$10.00</span></li>
+    <li><span class="item-name">5 Golpes de Mangu</span><span class="item-price">$11.00</span></li>
+    <li><span class="item-name">6 Golpes de Mangu</span><span class="item-price">$12.00</span></li>
+  </ul>
+</div>
+
+  <!-- Almuerzo -->
+<div class="menu-page almuerzo" id="almuerzo">
+  <button class="back-btn">← Volver</button>
+  <h3>Almuerzo (Lunch Especial)</h3>
+  <ul>
+    <li><span class="item-name">De Pollo</span><span class="item-price">$8.00</span></li>
+    <li><span class="item-name">Carne de Res</span><span class="item-price">$9.00</span></li>
+    <li><span class="item-name">De Costilla</span><span class="item-price">$9.00</span></li>
+    <li><span class="item-name">De Pernil</span><span class="item-price">$9.00</span></li>
+    <li><span class="item-name">De Rabo</span><span class="item-price">$13.00</span></li>
+    <li><span class="item-name">De Pechurina</span><span class="item-price">$9.00</span></li>
+    <li><span class="item-name">De Pechuga a la Plancha</span><span class="item-price">$9.00</span></li>
+    <li><span class="item-name">De Arbondiga</span><span class="item-price">$9.00</span></li>
+    <li><span class="item-name">De Chivo</span><span class="item-price">$10.00</span></li>
+    <li><span class="item-name">De Chuleta</span><span class="item-price">$9.00</span></li>
+    <li><span class="item-name">De Bacalao</span><span class="item-price">$9.00</span></li>
+    <li><span class="item-name">De Espaguettis</span><span class="item-price">$9.00</span></li>
+  </ul>
+</div>
+
+  <!-- Carnes -->
+<div class="menu-page carnes" id="carnes">
+  <button class="back-btn">← Volver</button>
+  <h3>Carnes Sola</h3>
+  <ul>
+    <li><span class="item-name">Bistec Encebollado</span><span class="item-price">$14.00</span></li>
+    <li><span class="item-name">Bistec Salteado</span><span class="item-price">$14.00</span></li>
+    <li><span class="item-name">Bistec al Caballo</span><span class="item-price">$16.00</span></li>
+    <li><span class="item-name">Bistec Empanisado</span><span class="item-price">$14.00</span></li>
+    <li><span class="item-name">Carne De Res</span><span class="item-price">$10.00</span></li>
+    <li><span class="item-name">Carne De Chivo</span><span class="item-price">$12.00</span></li>
+    <li><span class="item-name">Rabo</span><span class="item-price">$18.00</span></li>
+    <li><span class="item-name">Costilla</span><span class="item-price">$10.00</span></li>
+    <li><span class="item-name">Pollo Guisado</span><span class="item-price">$8.00</span></li>
+    <li><span class="item-name">Chicharron de Pollo</span><span class="item-price">$10.00</span></li>
+    <li><span class="item-name">Pechuga De Pollo</span><span class="item-price">$5.00</span></li>
+    <li><span class="item-name">Pollo Entero</span><span class="item-price">$14.00</span></li>
+    <li><span class="item-name">Medio Pollo</span><span class="item-price">$7.00</span></li>
+    <li><span class="item-name">Pollo Empanisado</span><span class="item-price">$10.00</span></li>
+    <li><span class="item-name">Pechurina</span><span class="item-price">$10.00</span></li>
+    <li><span class="item-name">Pechuga a la Plancha</span><span class="item-price">$10.00</span></li>
+    <li><span class="item-name">Pernil Pequeno</span><span class="item-price">$5.00</span></li>
+    <li><span class="item-name">Pernil Grande</span><span class="item-price">$10.00</span></li>
+    <li><span class="item-name">Patita De Cerdo</span><span class="item-price">$10.00</span></li>
+  </ul>
+</div>
+
+  <!-- Mariscos -->
+<div class="menu-page" id="mariscos">
+  <button class="back-btn">← Volver</button>
+  <h3>Mariscos</h3>
+  <ul>
+    <li><span class="item-name">Camarones en Salsa</span><span class="item-price">$12.00</span></li>
+    <li><span class="item-name">Camarones al Ajillo</span><span class="item-price">$12.00</span></li>
+    <li><span class="item-name">Pescado Frito</span><span class="item-price">$(preguntar)</span></li>
+    <li><span class="item-name">Pescado en Salsa</span><span class="item-price">$12.00</span></li>
+    <li><span class="item-name">Filete de Pescado Frito</span><span class="item-price">$12.00</span></li>
+    <li><span class="item-name">Bacalao Guisado</span><span class="item-price">$12.00</span></li>
+    <li><span class="item-name">Bacalao Salteado</span><span class="item-price">$12.00</span></li>
+  </ul>
+</div>
+
+  <!-- Sandwiches -->
+<div class="menu-page" id="sandwiches">
+  <button class="back-btn">← Volver</button>
+  <h3>Sándwiches</h3>
+  <ul>
+    <li><span class="item-name">Cubano</span><span class="item-price">$7.00</span></li>
+    <li><span class="item-name">Pollo</span><span class="item-price">$5.00</span></li>
+    <li><span class="item-name">Bistec</span><span class="item-price">$5.00</span></li>
+    <li><span class="item-name">Tripleta</span><span class="item-price">$8.00</span></li>
+  </ul>
+</div>
+
+  <!-- Sopas -->
+<div class="menu-page" id="sopas">
+  <button class="back-btn">← Volver</button>
+  <h3>Sopas</h3>
+  <ul>
+    <li><span class="item-name">Sancocho</span><span class="item-price">$10.00</span></li>
+    <li><span class="item-name">Sancocho Pequeno</span><span class="item-price">$6.00</span></li>
+    <li><span class="item-name">Pollo</span><span class="item-price">$8.00</span></li>
+    <li><span class="item-name">Pollo Pequeno</span><span class="item-price">$5.00</span></li>
+    <li><span class="item-name">Mondongo</span><span class="item-price">$12.00</span></li>
+    <li><span class="item-name">Mondongo Pequeno</span><span class="item-price">$6.00</span></li>
+    <li><span class="item-name">Asopado De Marisco</span><span class="item-price">$15.00</span></li>
+    <li><span class="item-name">Asopado De Camarones</span><span class="item-price">$12.00</span></li>
+  </ul>
+</div>
+
+
+  <!-- Bebidas -->
+<div class="menu-page bebidas" id="bebidas">
+  <button class="back-btn">← Volver</button>
+  <h3>Bebidas</h3>
+
+  <h4>Naturales</h4>
+  <p class="menu-description">Grandes - $8.00 | Pequeños - $4.00</p>
+  <ul>
+    <li><span class="item-name">Chinola / Parcha</span></li>
+    <li><span class="item-name">Morir Soñando</span></li>
+    <li><span class="item-name">Limón</span></li>
+    <li><span class="item-name">Tamarindo</span></li>
+  </ul>
+
+  <h4>De Nevera</h4>
+  <ul>
+    <li><span class="item-name">Refrescos de Botella</span><span class="item-price">$2.50</span></li>
+    <li><span class="item-name">Refrescos de Lata</span><span class="item-price">$1.00</span></li>
+    <li><span class="item-name">Refrescos de 2 Litros</span><span class="item-price">$4.00</span></li>
+  </ul>
+
+  <h4>Calientes</h4>
+  <ul>
+    <li><span class="item-name">Café Espresso</span><span class="item-price">$2.00</span></li>
+    <li><span class="item-name">Avena Grande</span><span class="item-price">$8.00</span></li>
+    <li><span class="item-name">Avena</span><span class="item-price">$4.00</span></li>
+  </ul>
+</div>
+  <!-- Picaderas -->
+  <div class="menu-page" id="picaderas">
+  <button class="back-btn">← Volver</button>
+    <h3>Picaderas</h3>
+    <ul>
+      <li> <span class = "item-name">Pequena</span>
+        <span class = "item-price">$35.00</span></li>
+      <li><span class = "item-name">Mediana</span>
+        <span class="item-price">$60.00</span></li>
+      <li> <span class = "item-name">Grande</span>
+        <span class="item-price">$80.00</span></li>
+    </ul>
+  </div>
+  </div>
+             </section>
+
+<noscript>
+  <style>
+    .menu-content-wrapper, .menu-page {
+      display: block !important;
+      opacity: 1 !important;
+      position: static !important;
+      transform: none !important;
+    }
+  </style>
+  <div style="padding: 2rem; text-align: center; color: red;">
+    JavaScript is disabled or failed to load. Please enable it to view the menu properly.
+  </div>
+</noscript>
+                <script src="script.js"></script>
+
+    </body>
+</html>
