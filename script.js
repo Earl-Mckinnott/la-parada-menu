@@ -82,6 +82,18 @@ menuButtons.forEach(button => {
         }
       }
 
+      if (targetId === 'almuerzo') {
+        document.body.classList.add('almuerzo-open');
+      } else {
+        document.body.classList.remove('almuerzo-open');
+      }
+
+      if (targetId === 'carnes') {
+  document.body.classList.add('carnes-open');
+} else {
+  document.body.classList.remove('carnes-open');
+}
+
       if (targetId === 'antojitos') {
         const banner = document.getElementById('antojitos-banner');
         if (banner) {
@@ -94,6 +106,7 @@ menuButtons.forEach(button => {
         }
       }
   targetPage.classList.add('active');
+  checkScrollVisibility(); // update arrow visibility on open
   document.body.classList.add('menu-view');
   document.body.style.overflow = 'hidden'; // 🔒 prevent background scrolling
 }
@@ -114,22 +127,47 @@ backButtons.forEach(button => {
     if (sopasBanner) {
       sopasBanner.classList.remove('active');
     }
-    document.body.classList.remove('antojitos-open', 'sopas-open');
+    document.body.classList.remove('antojitos-open', 'sopas-open', 'almuerzo-open');
     menuPages.forEach(page => page.classList.remove('ensaladas-bg', 'desayuno-bg', 'fade-in'));
     document.body.classList.remove('ensaladas-open');
+    // Hide scroll arrow when closing menu
+    if (scrollArrow) {
+      scrollArrow.style.opacity = '0';
+      scrollArrow.style.visibility = 'hidden';
+      scrollArrow.style.animation = 'none';
+    }
     document.body.style.overflow = ''; // ✅ re-enable scrolling
   });
 });
 
 // Hide scroll-down arrow on scroll
 const scrollArrow = document.querySelector('.scroll-down-arrow');
-if (scrollArrow) {
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-      scrollArrow.classList.add('hide');
-    }
-  });
+
+function checkScrollVisibility() {
+  const activePage = document.querySelector('.menu-page.active');
+  if (!activePage || !scrollArrow) return;
+
+  const scrollTop = activePage.scrollTop;
+  const scrollHeight = activePage.scrollHeight;
+  const clientHeight = activePage.clientHeight;
+
+  console.log({ scrollTop, scrollHeight, clientHeight });
+  console.log('totalScrolled:', scrollTop + clientHeight, 'vs scrollHeight:', scrollHeight);
+
+  if (scrollTop + clientHeight >= scrollHeight - 50) {
+    scrollArrow.style.opacity = '0';
+    scrollArrow.style.visibility = 'hidden';
+    scrollArrow.style.animation = 'none';
+  } else {
+    scrollArrow.style.opacity = '1';
+    scrollArrow.style.visibility = 'visible';
+    scrollArrow.style.animation = 'blinkScrollArrow 1.5s ease-in-out infinite';
+  }
 }
+
+document.querySelectorAll('.menu-page').forEach(page => {
+  page.addEventListener('scroll', checkScrollVisibility);
+});
 
 // Swipe down to close menu page (like clicking "Volver")
 const menuPagesAll = document.querySelectorAll('.menu-page');
@@ -157,6 +195,14 @@ menuPagesAll.forEach(menuPage => {
   });
 });
 
+
+
+// update arrow visibility when scrolling any menu page
+document.querySelectorAll('.menu-page').forEach(page => {
+  page.addEventListener('scroll', checkScrollVisibility);
+});
+
+
 document.addEventListener('click', (e) => {
   const openMenuPage = document.querySelector('.menu-page.active');
   if (
@@ -170,12 +216,25 @@ document.addEventListener('click', (e) => {
       banner.classList.remove('active');
     }
     menuPages.forEach(page => page.classList.remove('ensaladas-bg', 'desayuno-bg', 'fade-in'));
-    document.body.classList.remove('antojitos-open');
-    document.body.classList.remove('ensaladas-open');
-    document.body.classList.remove('sopas-open');
+    document.body.classList.remove(
+      'antojitos-open',
+      'ensaladas-open',
+      'sopas-open',
+      'almuerzo-open',
+      'carnes-open',
+      'bebidas-open'
+    );
+
     const sopasBanner = document.getElementById('sopas-banner');
     if (sopasBanner) {
       sopasBanner.classList.remove('active');
+    }
+
+    // Hide scroll arrow when closing menu
+    if (scrollArrow) {
+      scrollArrow.style.opacity = '0';
+      scrollArrow.style.visibility = 'hidden';
+      scrollArrow.style.animation = 'none';
     }
     document.body.style.overflow = ''; // ✅ re-enable scrolling
 

@@ -333,7 +333,7 @@ body.sopas-open #sopas-banner {
   transform: translate(-50%, 100%);
   width: 90%;
   max-width: 600px;
-  max-height: 70vh;
+  max-height: 80vh;
   background: rgb(255, 251, 247);
   padding: 1rem 0.5rem;
   padding-right: 1rem;
@@ -804,33 +804,33 @@ body.home #logo {
 }
 
 /* Blinking down arrow scroll indicator for specific menu pages */
-.menu-page.carnes::after,
-.menu-page.almuerzo::after,
-.menu-page.bebidas::after {
-  content: '↓';
-  position: absolute;
-  bottom: 12px;
+
+.scroll-down-arrow {
+  position: fixed;
+  bottom: 65px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.5rem;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 0, 0, 0.757);
   animation: blinkScrollArrow 1.5s ease-in-out infinite;
-  transition: opacity 0.5s ease;
   pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
+}
+
+body.antojitos-open .scroll-down-arrow,
+body.sopas-open .scroll-down-arrow,
+body.almuerzo-open .scroll-down-arrow,
+body.carnes-open .scroll-down-arrow,
+body.bebidas-open .scroll-down-arrow {
+  opacity: 1;
+  visibility: visible;
 }
 
 @keyframes blinkScrollArrow {
   0%, 100% { opacity: 0.2; }
-  50% { opacity: 0.8; }
+  50% { opacity: 1; }
 }
 
-.menu-page.hide-scroll-indicator::after {
-  opacity: 0;
-  animation: none;
-}
-
-.scroll-down-arrow.hide {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
