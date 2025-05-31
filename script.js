@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 const body= document.body;
 
+  // Preload Ensaladas background image
+  const ensaladasImage = new Image();
+  ensaladasImage.src = 'images/salad-background.jpg';
+
   if (document.body.classList.contains('menu-view')) {
     document.body.classList.add('initial-load');
 
@@ -63,6 +67,21 @@ menuButtons.forEach(button => {
         targetPage.classList.remove('desayuno-bg', 'fade-in');
       }
 
+      // sopas menu page block
+      if (targetId === 'sopas') {
+        document.body.classList.add('sopas-open');
+        const banner = document.getElementById('sopas-banner');
+        if (banner) {
+          banner.classList.add('active');
+        }
+      } else {
+        document.body.classList.remove('sopas-open');
+        const banner = document.getElementById('sopas-banner');
+        if (banner) {
+          banner.classList.remove('active');
+        }
+      }
+
       if (targetId === 'antojitos') {
         const banner = document.getElementById('antojitos-banner');
         if (banner) {
@@ -90,7 +109,12 @@ backButtons.forEach(button => {
     if (banner) {
       banner.classList.remove('active');
     }
-    document.body.classList.remove('antojitos-open');
+    // Remove sopas banner and class
+    const sopasBanner = document.getElementById('sopas-banner');
+    if (sopasBanner) {
+      sopasBanner.classList.remove('active');
+    }
+    document.body.classList.remove('antojitos-open', 'sopas-open');
     menuPages.forEach(page => page.classList.remove('ensaladas-bg', 'desayuno-bg', 'fade-in'));
     document.body.classList.remove('ensaladas-open');
     document.body.style.overflow = ''; // ✅ re-enable scrolling
@@ -148,6 +172,11 @@ document.addEventListener('click', (e) => {
     menuPages.forEach(page => page.classList.remove('ensaladas-bg', 'desayuno-bg', 'fade-in'));
     document.body.classList.remove('antojitos-open');
     document.body.classList.remove('ensaladas-open');
+    document.body.classList.remove('sopas-open');
+    const sopasBanner = document.getElementById('sopas-banner');
+    if (sopasBanner) {
+      sopasBanner.classList.remove('active');
+    }
     document.body.style.overflow = ''; // ✅ re-enable scrolling
 
     // Do not reset nav animation unless swipe or volver button is used

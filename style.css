@@ -249,6 +249,25 @@ body.antojitos-open #antojitos-banner {
 }
 
 
+/* Sopas banner */
+#sopas-banner {
+  opacity: 0;
+  transform: translateX(-50%) translateY(2rem);
+  pointer-events: none;
+  position: fixed;
+  top: 4rem;
+  left: 73%;
+  width: 40%;
+  max-width: 65%;
+  z-index: 30;
+}
+body.sopas-open #sopas-banner {
+  animation: slideInFromRight 0.9s ease forwards;
+  pointer-events: auto;
+}
+
+
+
 
 /* MENU CONTENT STYLE */
 
