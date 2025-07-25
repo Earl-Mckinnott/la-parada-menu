@@ -317,3 +317,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.gallery-track');
+  if (!track) return;
+
+  let position = 0;
+  const speed = 0.5; // pixels per frame, adjust for speed
+
+  function animate() {
+    position -= speed;
+    track.style.transform = `translate3d(${position}px, 0, 0)`;
+
+    const firstImage = track.querySelector('img');
+    const firstImageWidth = firstImage.offsetWidth + 10; // +10 for the gap
+
+    // If the first image has fully scrolled out of view
+    if (Math.abs(position) >= firstImageWidth) {
+  const clone = firstImage.cloneNode(true);
+  track.appendChild(clone);
+  track.removeChild(firstImage);
+
+  position += firstImageWidth;
+  track.style.transform = `translate3d(${position}px, 0, 0)`;
+}
+
+    requestAnimationFrame(animate);
+  }
+
+  requestAnimationFrame(animate);
+});
