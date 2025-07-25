@@ -243,3 +243,77 @@ document.addEventListener('click', (e) => {
   }
 });
 });
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+ 
+
+  // Preload gallery images while splash is visible
+const galleryImages = [
+  'images/gallery1.jpg',
+  'images/gallery2.jpg',
+  'images/gallery3.jpg',
+  'images/gallery4.jpg',
+  'images/gallery5.jpg'
+];
+galleryImages.forEach(src => {
+  const img = new Image();
+  img.src = src;
+});
+
+  const splash = document.getElementById('splash-screen');
+  const enter = document.querySelector('.enter-text');
+  
+if (localStorage.getItem('splashDone')) {
+    splash.style.display = 'none';
+    return;
+  }
+
+  if (splash && enter) {
+    enter.addEventListener('click', () => {
+      console.log('enter clicked')
+      splash.classList.add('reveal');
+
+ localStorage.setItem('splashDone', 'true');
+      // optional: preload images for your gallery here
+
+      setTimeout(() => {
+        splash.style.display = 'none';
+      }, 1600); // matches transition duration
+    });
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.getElementById('main-nav');
+  const navLinks = document.querySelectorAll('#main-nav a');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const url = link.getAttribute('href');
+
+      // fade out nav
+      nav.classList.add('fade-out');
+
+      // wait for fade-out animation before navigating
+      setTimeout(() => {
+        window.location.href = url;
+      }, 500); // match the transition duration
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const homeBtn = document.getElementById('home-btn');
+  if (homeBtn) {
+    // ensure it starts invisible
+    homeBtn.style.opacity = '0';
+    // wait one frame, then fade in
+    requestAnimationFrame(() => {
+      homeBtn.style.opacity = '1';
+    });
+  }
+});
