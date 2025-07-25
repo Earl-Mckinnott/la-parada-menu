@@ -266,7 +266,7 @@ galleryImages.forEach(src => {
   const splash = document.getElementById('splash-screen');
   const enter = document.querySelector('.enter-text');
   
-if (localStorage.getItem('splashDone')) {
+if (sessionStorage.getItem('splashDone')) {
     splash.style.display = 'none';
     return;
   }
@@ -276,7 +276,7 @@ if (localStorage.getItem('splashDone')) {
       console.log('enter clicked')
       splash.classList.add('reveal');
 
- localStorage.setItem('splashDone', 'true');
+ sessionStorage.setItem('splashDone', 'true');
       // optional: preload images for your gallery here
 
       setTimeout(() => {
