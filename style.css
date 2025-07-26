@@ -37,38 +37,6 @@ body {
 
 
 
-/* Language Toggle */
-#language-toggle {
-  position: absolute;
-  top: 0.6rem;
-  right: 0.5rem;
-  display: flex;
-  justify-content: flex-end;
-  gap: 0.5rem;
-}
-
-/* this is the only block you need for the links */
-#language-toggle .lang-btn {
-  display: inline-block;
-  padding: 0.1rem 0.6rem; /* moved from button{} */
-  font-size: 0.9rem;
-  border: none;
-  background-color: #fff8ed;
-  cursor: pointer;
-  text-decoration: none;
-  border-radius: 5px;
-  color: #ffb390;
-  font-weight: bold;
-}
-
-#language-toggle .lang-btn.active {
-  background-color: #fff8ed;
-  color: #ff0000;
-}
-
-
-
-
 /* Hero Section */
 #hero {
     text-align: center;
@@ -676,6 +644,40 @@ section h2 {
 
 
 
+/* Language Toggle */
+#language-toggle {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  z-index: 9999;
+}
+
+/* this is the only block you need for the links */
+#language-toggle .lang-btn {
+  display: inline-block;
+  padding: 0.1rem 0.6rem; /* moved from button{} */
+  font-size: 0.9rem;
+  border: none;
+  background-color: #fff8ed;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #ffb390;
+  font-weight: bold;
+}
+
+#language-toggle .lang-btn.active {
+  background-color: #fff8ed;
+  color: #ff0000;
+}
+
+
+
+
+
 
 
 /* LOGO STUFF */
@@ -765,6 +767,25 @@ body.home #logo {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
+
+
+.logo-wrapper {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  overflow: visible; /* keep breathing visible */
+  z-index: 1;
+}
+
+/* keep this logo from expanding its box too much */
+#logo {
+  transform-origin: center;
+}
+
+
+
+
+
 
 /* homepage gallery  */
 
