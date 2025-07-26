@@ -348,3 +348,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
   requestAnimationFrame(animate);
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const rotatingSpan = document.getElementById('rotating-span');
+
+  const phrases = [
+  "Bienvenido a",
+  "la Parada del Sabor",
+  "comida casera,",
+  "y verdadera.",
+  "Tu lugar favorito",
+  "está en Allentown.",
+  "Haz la fila",
+  "o toma asiento.",
+  "¡llámanos!",
+  "hacemos delivery.",
+  "Sancocho el fin de semana",
+  "ya tú sabe.",
+  "...",
+  "también hacemos catering.",
+  "..."
+];
+
+  let index = 0;
+
+  function showNextPhrase() {
+    // fade out
+    rotatingSpan.style.opacity = 0;
+
+    setTimeout(() => {
+      // change text
+      index = (index + 1) % phrases.length;
+      rotatingSpan.textContent = phrases[index];
+
+      // fade in
+      rotatingSpan.style.opacity = 1;
+    },500); // matches transition time in CSS
+  }
+
+  setInterval(showNextPhrase, 3400); // change every 3 seconds
+});
