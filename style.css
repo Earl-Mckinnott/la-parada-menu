@@ -406,8 +406,36 @@ body.sopas-open #sopas-banner {
   margin-top: -4.5rem;
 }
 
-.contact-page #main-nav {
-  margin-top: -4.5rem;
+#contact {
+  position: relative;
+}
+
+.contact-heading {
+   position: relative;
+  margin-top: -2rem;       /* adjust upward/downward */
+  text-align: center;
+  font-size: 1.5rem;
+  font-style:italic;
+}
+
+.contact-content {
+  margin-top: 3rem;
+}
+
+
+
+body.contact-view #home-btn {
+  position: absolute;
+  top: -2.5rem;            /* adjust to sit just above the heading */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background-image: url('images/home-icon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  text-indent: -9999px;
 }
 
 .jobs-page #main-nav {
