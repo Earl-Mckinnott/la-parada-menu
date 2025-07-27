@@ -326,21 +326,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const track = document.querySelector('.gallery-track');
   if (!track) return;
 
-  // duplicate all images (append a clone of the full set)
-  track.innerHTML += track.innerHTML;
-
   let position = 0;
-  const speed = 0.7; // adjust for speed
+  const speed = 0.5; // adjust speed
 
-  const totalWidth = track.scrollWidth / 2; // width of the original set
+const totalWidth = track.scrollWidth / 2; 
 
   function animate() {
     position -= speed;
     track.style.transform = `translate3d(${position}px, 0, 0)`;
 
-    // once we've scrolled a full set, reset instantly
+// soft reset: when one full set has scrolled past
     if (Math.abs(position) >= totalWidth) {
-      position = 0;
+      position = 0; // jump back to start (off-screen)
       track.style.transform = `translate3d(${position}px, 0, 0)`;
     }
 
@@ -354,24 +351,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const rotatingSpan = document.getElementById('rotating-span');
 
   const phrases = [
   "Bienvenido a",
   "la Parada del Sabor",
-  "comida casera,",
-  "y verdadera.",
+  "Comida casera.",
   "Tu lugar favorito",
   "está en Allentown.",
   "Haz la fila",
@@ -379,9 +365,8 @@ document.addEventListener('DOMContentLoaded', () => {
   "¡llámanos!",
   "hacemos delivery.",
   "Sancocho el fin de semana",
-  "ya tú sabe.",
   "...",
-  "también hacemos catering.",
+  "Hacemos catering.",
   "..."
 ];
 
@@ -398,10 +383,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // fade in
       rotatingSpan.style.opacity = 1;
-    },500); // matches transition time in CSS
+    },300); // matches transition time in CSS
   }
 
-  setInterval(showNextPhrase, 3400); // change every 3 seconds
+  setInterval(showNextPhrase, 2700); // change every 3 seconds
 });
 
 
