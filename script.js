@@ -389,3 +389,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setInterval(showNextPhrase, 3400); // change every 3 seconds
 });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const mapBtn = document.getElementById('map-button');
+  if (!mapBtn) return;
+
+  mapBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const address = encodeURIComponent('102 W Susquehanna St, Allentown, PA');
+
+    // simple device detection
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+
+    const url = isIOS
+      ? `maps://maps.apple.com/?q=${address}`
+      : `https://www.google.com/maps/search/?api=1&query=${address}`;
+
+    window.open(url, '_blank');
+  });
+});

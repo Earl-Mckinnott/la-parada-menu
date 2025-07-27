@@ -48,7 +48,7 @@ body {
   font-family: system-ui, serif;
   font-size: 1.1rem;
   color: #000000;
-  margin-top: -4rem;
+  margin-top: -1rem;
   margin-bottom: 3rem;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -690,11 +690,12 @@ section h2 {
   text-align: center;
   font-family: 'Georgia', serif;
   margin: 0 auto;
-  margin-top: -0.5rem;
+  margin-top: -0.7rem;
   margin-bottom: -4.9rem;
   transform-origin: center center;
   opacity: 1;
   animation:breathe 3s ease-in-out infinite;
+  margin-left: -0rem;
 }
 
 body.home #logo {
@@ -722,8 +723,8 @@ body.home #logo {
 .logo-small {
   font-size: 1.6rem;
   color: rgb(213, 49, 8);
-  margin-top: -0.6rem;
-  margin-bottom: -1.4rem;
+  margin-top: -0.8rem;
+  margin-bottom: -1.2rem;
   font-weight: bold ;
 }
 
@@ -835,6 +836,74 @@ body.home #logo {
   }
 }
 
+
+
+
+
+
+
+
+/* call button */
+
+
+.call-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;  /* vertically align */
+  flex-direction: row;  /* make sure it's horizontal */
+  gap: 3rem;            /* space between icons */
+  margin: 1rem 0;
+}
+
+.call-button,
+.map-button {
+  display: flex;                 /* flex container */
+  justify-content: center;       /* center horizontally */
+  align-items: center;           /* center vertically */
+  background-color: #fff195;
+  width: 60px;   /* fixed size so it stays a perfect circle */
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.304);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.call-button img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.call-button:hover {
+  transform: scale(1.05);
+}
+
+.map-button img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+
+.map-button:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Blinking down arrow scroll indicator for specific menu pages */
 
 .scroll-down-arrow {
@@ -937,18 +1006,39 @@ color: rgb(237, 24, 0);
 }
 
 
-
-
-.flag-container {
+.logo-flags {
   display: flex;
   justify-content: center;
-  margin: -1rem 0; /* space above and below */
+  align-items: center;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+  min-height: 90px;
+  width: 100%;
 }
 
-.flag-container img {
-  max-width: 150px;   /* size of the flag */
+.logo-flags img {
+  max-width: 55px;
   height: auto;
-  border-radius: 6px; /* optional, gives slightly rounded corners */
+  transform: translateY(-60px);
 }
+
+ .logo-flags .flag-left {
+  margin-right: -3rem;
+}
+
+.logo-flags .flag-right {
+  max-width: 51px;
+  margin-left: -3rem;
+}
+
+.logo-flags > #logo {
+  flex: 0 0 auto; /* prevents it from stretching weirdly */
+}
+
+
+.logo-flags img[src*="transparent.png"] {
+  visibility: hidden; /* they still take up space but are invisible */
+}
+
 
 
