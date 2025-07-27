@@ -1,6 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+      <style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #ff9900; /* same background color as your index */
+    font-family: Arial, sans-serif;
+  }
+
+  #hero, #main-nav, .home-gallery, .rotating-text, .call-button-container {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  body.loaded #hero,
+  body.loaded #main-nav,
+  body.loaded .home-gallery,
+  body.loaded .rotating-text,
+  body.loaded .call-button-container {
+    opacity: 1;
+  }
+</style>
+      <script>
+  if (localStorage.getItem('splashDone') === 'true') {
+    document.documentElement.classList.add('skip-splash');
+  }
+</script>
+<style>
+  #splash-screen {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(42, 196, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  .skip-splash #splash-screen {
+    display: none !important;
+  }
+</style>
+<script>
+  if (localStorage.getItem('splashDone') !== 'true') {
+    document.write(`
+      <div id="splash-screen">
+        <div class="enter-text">
+          <span>ENTRAR</span>
+          <span>ENTER</span>
+        </div>
+      </div>
+    `);
+  }
+</script>
+
         <meta charset ="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>La Parada Del Sabor</title>
@@ -10,14 +66,9 @@
         <link rel="stylesheet" href="style.css" />
     </head>
 
- <body class="home">
 
-<div id="splash-screen">
-  <div class="enter-text">
-    <span>ENTRAR</span>
-  <span>ENTER</span>
-  </div>
-</div>
+
+<body class="home">
 
 
 
@@ -105,7 +156,11 @@
 
 
 
-
+<script>
+  window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+  });
+</script>
 
                 <script src="script.js"></script>
 

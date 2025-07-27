@@ -252,11 +252,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Preload gallery images while splash is visible
 const galleryImages = [
-  'images/gallery1.jpg',
+  'images/gallery7.webp',
+  'images/gallery1.webp',
   'images/gallery2.jpg',
-  'images/gallery3.jpg',
+  'images/gallery9.webp',
+  'images/gallery6.jpg',
   'images/gallery4.jpg',
-  'images/gallery5.jpg'
+  'images/gallery5.jpg',
+  'images/gallery8.webp'
 ];
 galleryImages.forEach(src => {
   const img = new Image();
@@ -323,31 +326,42 @@ document.addEventListener('DOMContentLoaded', () => {
   const track = document.querySelector('.gallery-track');
   if (!track) return;
 
+  // duplicate all images (append a clone of the full set)
+  track.innerHTML += track.innerHTML;
+
   let position = 0;
-  const speed = 0.5; // pixels per frame, adjust for speed
+  const speed = 0.7; // adjust for speed
+
+  const totalWidth = track.scrollWidth / 2; // width of the original set
 
   function animate() {
     position -= speed;
     track.style.transform = `translate3d(${position}px, 0, 0)`;
 
-    const firstImage = track.querySelector('img');
-    const firstImageWidth = firstImage.offsetWidth + 10; // +10 for the gap
-
-    // If the first image has fully scrolled out of view
-    if (Math.abs(position) >= firstImageWidth) {
-  const clone = firstImage.cloneNode(true);
-  track.appendChild(clone);
-  track.removeChild(firstImage);
-
-  position += firstImageWidth;
-  track.style.transform = `translate3d(${position}px, 0, 0)`;
-}
+    // once we've scrolled a full set, reset instantly
+    if (Math.abs(position) >= totalWidth) {
+      position = 0;
+      track.style.transform = `translate3d(${position}px, 0, 0)`;
+    }
 
     requestAnimationFrame(animate);
   }
 
   requestAnimationFrame(animate);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
