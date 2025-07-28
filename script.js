@@ -246,10 +246,9 @@ document.addEventListener('click', (e) => {
 
 
 
+// home splash screen
 
 document.addEventListener('DOMContentLoaded', () => {
- 
-
   // Preload gallery images while splash is visible
 const galleryImages = [
   'images/gallery7.webp',
@@ -279,6 +278,12 @@ if (sessionStorage.getItem('splashDone')) {
       console.log('enter clicked')
       splash.classList.add('reveal');
 
+      window.galleryShouldStart = true;
+
+      if (typeof window.startGallery === 'function') {
+        window.startGallery();
+      }
+
  sessionStorage.setItem('splashDone', 'true');
       // optional: preload images for your gallery here
 
@@ -288,6 +293,8 @@ if (sessionStorage.getItem('splashDone')) {
     });
   }
 });
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const nav = document.getElementById('main-nav');
@@ -322,7 +329,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.addEventListener('DOMContentLoaded', () => {
+
+
+
+// home gallery
+
+window.addEventListener('load', () => {
   const track = document.querySelector('.gallery-track');
   if (!track) return;
 
@@ -330,6 +342,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const speed = 0.5; // adjust speed
 
 const totalWidth = track.scrollWidth / 2; 
+console.log("track total width:", track.scrollWidth)
 
   function animate() {
     position -= speed;
@@ -342,14 +355,23 @@ const totalWidth = track.scrollWidth / 2;
     }
 
     requestAnimationFrame(animate);
-  }
 
-  requestAnimationFrame(animate);
+  }
+  window.startGallery = ()=> {
+    console.log('starting gallery animation');
+    requestAnimationFrame(animate)
+  }
+  // if no splash exists at all, start immediately
+  if (!document.getElementById('splash-screen') || window.galleryShouldStart) {
+    window.startGallery();
+  }
 });
 
 
 
 
+
+// home rotating messages
 
 document.addEventListener('DOMContentLoaded', () => {
   const rotatingSpan = document.getElementById('rotating-span');
@@ -390,6 +412,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+
+// map button 
 
 document.addEventListener('DOMContentLoaded', () => {
   const mapBtn = document.getElementById('map-button');
