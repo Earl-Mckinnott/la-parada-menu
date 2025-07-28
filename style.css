@@ -98,14 +98,40 @@ body {
 
 #main-nav ul li a {
   display: inline-block;
-  background-color: #ffe9a8ea;
-  padding: 0rem 1.2rem !important;  /* force */
+  background-color: #ffedb6eb;
+  padding: 0rem 1rem 0rem !important;  /* force */
+  line-height: 1.4;
   border-radius: 20px;
   text-decoration: none;
   color: #111;
   font-weight: 500;
   transition: background-color 0.3s ease;
+  box-shadow: 0 1px 6px rgb(255, 230, 0)
+  ;
 }
+
+#main-nav ul li:first-child a {
+  animation: wobble 6s ease-in-out infinite;
+  animation-delay: 9s; /* waits 3 seconds before the first wobble */
+}
+
+@keyframes wobble {
+  0% { transform: rotate(0deg); }
+  3% { transform: rotate(-8deg); }
+  6% { transform: rotate(8deg); }
+  9% { transform: rotate(-8deg); }
+  12% { transform: rotate(8deg); }
+  15% { transform: rotate(-6deg); }
+  20% { transform: rotate(6deg); }
+  25% { transform: rotate(-4deg); }
+  30% { transform: rotate(4deg); }
+  35% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); } /* idle from 35% to 100% */
+}
+
+
+
+
 
 #main-nav a {
  display: inline-block;
@@ -887,7 +913,7 @@ html, body{
   display: flex;                 /* flex container */
   justify-content: center;       /* center horizontally */
   align-items: center;           /* center vertically */
-  background-color: #fff195;
+  background-color: #ffeebaeb;
   width: 60px;   /* fixed size so it stays a perfect circle */
   height: 60px;
   border-radius: 50%;
@@ -1010,7 +1036,7 @@ color: rgb(237, 24, 0);
 .rotating-text {
   text-align: center;
   font-size: 1.7rem;
-  margin: 0.8rem 0 1rem 0 ;
+  margin: 1.5rem 0 1rem 0 ;
   font-weight: 800;
   color: #ccff00;
   min-height: 1.5em;
