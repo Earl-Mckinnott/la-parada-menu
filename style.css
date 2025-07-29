@@ -467,9 +467,9 @@ section h2 {
 /* MENU DROPDOWN */
 
 .menu-dropdown {
-  position: fixed; /* stays at top while scrolling */
-  top: 17.6rem;
-  
+  position: sticky; /* stick while scrolling */
+  top: 0.5rem; /* final resting spot near the top */
+  margin-top: -3rem;
   inset-inline: 0;
   margin-inline: auto;
   width: fit-content;
@@ -478,12 +478,10 @@ section h2 {
   
   display: block;
   justify-content: center;
-  
- 
-   opacity: 0;                 /* start hidden */
+
+  opacity: 0;                 /* start hidden */
   animation: fadeSlideDown 0.7s ease forwards;
-  animation-delay: 0.5s;      /* slight delay if you want */
-transition: top 0.25s ease-out;
+  animation-delay: 0.55s;      /* slight delay if you want */
 }
 
 @keyframes fadeSlideDown {
@@ -499,7 +497,7 @@ transition: top 0.25s ease-out;
 
 
 .menu-dropdown .dropdown-toggle {
-  background-color: #e5e590; /* light background */
+  background-color: #d23205; /* light background */
   padding: 0.5rem;
   border-radius: 50%; /* perfect circle */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.176);
@@ -531,13 +529,13 @@ transition: top 0.25s ease-out;
   justify-content: space-between;
   gap: 1px;
   width: 45px;  /* size of the button */
-  height: 33px; /* total height of 3 bars + spacing */
+  height: 40px; /* total height of 3 bars + spacing */
 }
 
 .dropdown-toggle span {
   display: block;
-  height: 2px;
-  background-color: #dd0202; /* color of bars */
+  height: 3px;
+  background-color: #ffffff; /* color of bars */
   border-radius: 2px;
   width: 100%;
 }
@@ -547,7 +545,7 @@ transition: top 0.25s ease-out;
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #f6e8d0;
+  background-color: #ffe345;
   border-radius: 40px;
   padding: 0.5rem 0.4rem;
   z-index: 1000;
@@ -561,7 +559,7 @@ transition: top 0.25s ease-out;
   overflow: hidden;
   pointer-events: none;
 margin-top: 0.5rem;
-  transition: max-height 0.5s ease, opacity 0.5s ease;
+  transition: max-height 0.6s ease, opacity 0.6s ease;
   min-width: 340px;
 }
 
@@ -576,13 +574,14 @@ margin-top: 0.5rem;
   display: flex;
   align-items: center;         /* vertically center emoji & text */
   justify-content: center;     /* center the content as a whole */
-  gap: 0.4rem;                 /* space between emoji and text */
+  gap: -3rem;                 /* space between emoji and text */
   padding: 0.35rem 0.8rem;
   font-size: 1.3rem;
+  
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-  color: rgb(0, 188, 16);
+  color: rgb(189, 35, 1);
   white-space: nowrap;         /* prevents wrapping */
 }
 
@@ -701,13 +700,14 @@ margin-top: 0.5rem;
 
 .item-name {
   font-weight: 600;
-  color: #333;
+  color: #fffcc4;
   flex: 1;
+  font-style: italic;
 }
 
 .item-price {
   font-weight: 500;
-  color: #666;
+  color: #f8e087e9;
   white-space: nowrap;
   min-width: 60px;
   text-align: right;
@@ -715,7 +715,8 @@ margin-top: 0.5rem;
 
 .menu-description {
   font-size: 0.95rem;
-  color: #666;
+  text-align: center;
+  color: #fff700;
   margin: 0.3rem 0 0.6rem;
   line-height: 1.5;
 }
@@ -738,7 +739,7 @@ margin-top: 0.5rem;
   padding-top: 0.2rem;
   padding-bottom: 3rem;           /* was 1rem – adds more breathing room */
   margin: 1rem auto;       /* centers horizontally */
-  background: #ffede4ae;
+  background: #ed7322;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   max-width: 100%;          /* keep a consistent width */
@@ -748,7 +749,8 @@ margin-top: 0.5rem;
 .menu-section h3 {
   font-size: 1.7rem;
   font-weight: 600;
-  border-bottom: 2px solid #08b9d4;
+  color: rgb(255, 247, 0);
+  border-bottom: 2px solid #efb105;
   padding-bottom: 0.9rem;
   
 }

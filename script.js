@@ -191,38 +191,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-const menuBtn = document.querySelector('.menu-dropdown');
-
-let lastScrollY=0;
-let ticking=false;
-function updateMenuBtnPosition() {
-  const startTop = 17.6; // same as CSS top
-  const endTop = 0.5;      // final resting position
-  const scrollDistance = 410; // how far the effect lasts (px)
-
-  // how far along (0 → 1)
-  let progress = Math.min(lastScrollY / scrollDistance, 1);
-
-  // ease it a bit (optional, makes it smoother)
-  progress = progress * (2 - progress); // easeOutQuad
-
-  const newTop = startTop - (startTop - endTop) * progress;
-
-  menuBtn.style.top = `${newTop}rem`;
- 
-
-  ticking = false;
-}
-window.addEventListener('scroll', () => {
-  lastScrollY = window.scrollY;
-
-  if (!ticking) {
-    window.requestAnimationFrame(updateMenuBtnPosition);
-    ticking = true;
-  }
-});
-
-
 document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('.menu-section');
 
