@@ -31,7 +31,7 @@ body {
     background-color: #ff9900;
     line-height:1.6;
     padding: 1rem;
-    max-width: 1000px;
+    max-width: 100%;
     margin: 0 auto;
     
 }
@@ -293,7 +293,6 @@ body.antojitos-open #antojitos-banner {
 
 /* Menu Page Overlay */
 .menu-page {
-  
   width: 90%;
   max-width: 600px;
   max-height: 80vh;
@@ -302,8 +301,6 @@ body.antojitos-open #antojitos-banner {
   padding-right: 1rem;
   border-radius: 2rem;
   box-shadow: 4px 3px  rgba(145, 255, 0, 0.586);
-  
-  
   
   z-index: 20;
   scroll-behavior: smooth;
@@ -418,8 +415,8 @@ section h2 {
 
 .menu-heading {
   position: relative;
-  margin-top: -2rem; /* or try -2rem if needed */
-  margin-bottom:2.5rem;
+  margin-top: -2.45rem; /* or try -2rem if needed */
+  margin-bottom:3rem;
   text-align: center;
   font-size: 1.8rem; /* tweak for size if you want */
   font-style:italic;
@@ -429,7 +426,7 @@ section h2 {
 }
 #home-btn {
   position: absolute;
-  top: -2.5rem;     /* adjust distance from the top of menu header */
+  top: -2rem;     /* adjust distance from the top of menu header */
   left: 50%;      /* center horizontally */
   transform: translateX(-50%);
   width: 30px;
@@ -464,21 +461,21 @@ section h2 {
 
 .menu-dropdown {
   position: fixed; /* stays at top while scrolling */
-  top: 15rem;
+  top: 17.6rem;
   
   transform: translateX(-50%) !important;
   left: 50% !important ;
   z-index: 1000;
   text-align: center;
-  margin-top: 2.5rem;
+  
   display: block;
   justify-content: center;
-  margin-bottom: 1rem;
+  
  
    opacity: 0;                 /* start hidden */
   animation: fadeSlideDown 0.7s ease forwards;
   animation-delay: 0.5s;      /* slight delay if you want */
-
+transition: top 0.25s ease-out;
 }
 
 @keyframes fadeSlideDown {
@@ -491,6 +488,28 @@ section h2 {
     transform: translateY(0);
   }
 }
+
+
+.menu-dropdown .dropdown-toggle {
+  background-color: #e5e590; /* light background */
+  padding: 0.5rem;
+  border-radius: 50%; /* perfect circle */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.176);
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px; /* space between lines */
+}
+
+
+
+
+
+
 
 .dropdown-toggle {
   position: relative;
@@ -510,7 +529,7 @@ section h2 {
 .dropdown-toggle span {
   display: block;
   height: 2px;
-  background-color: #000000; /* color of bars */
+  background-color: #dd0202; /* color of bars */
   border-radius: 2px;
   width: 100%;
 }
@@ -520,22 +539,22 @@ section h2 {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #fff4dc;
-  border-radius: 10px;
-  padding: 0 1rem;
+  background-color: #f6e8d0;
+  border-radius: 40px;
+  padding: 0.5rem 0.4rem;
   z-index: 1000;
   
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
+  gap: 1rem;
 
   max-height: 0;
   opacity: 0;
   overflow: hidden;
   pointer-events: none;
-
+margin-top: 0.5rem;
   transition: max-height 0.5s ease, opacity 0.5s ease;
-  min-width: 300px;
+  min-width: 340px;
 }
 
 .dropdown-list.show {
@@ -546,12 +565,17 @@ section h2 {
 
 
 .dropdown-list a {
-  display: block;
-  padding: 0.4rem 1rem;
-  text-decoration: none;
+  display: flex;
+  align-items: center;         /* vertically center emoji & text */
+  justify-content: center;     /* center the content as a whole */
+  gap: 0.4rem;                 /* space between emoji and text */
+  padding: 0.35rem 0.8rem;
   font-size: 1.3rem;
-  font-weight: 600;
-  color: #1eb600;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(0, 188, 16);
+  white-space: nowrap;         /* prevents wrapping */
 }
 
 .dropdown-list a:hover {
@@ -638,8 +662,14 @@ section h2 {
   background: #c2bfb5;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  opacity: 0;                 /* start invisible */
+  transform: translateY(30px); /* slightly shifted down */
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
-
+.menu-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .menu-section ul {
   list-style: none;
@@ -717,32 +747,8 @@ section h2 {
 
 
 
-/* Removed background-color, border-radius, box-shadow, and padding-top, margin-top updated */
 
-#mariscos {
-    overflow: hidden; /* so rotated image doesn’t spill outside */
-}
 
-#mariscos::after {
-  content: '';
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  width: 400px;
-  height: 400px;
-  background-image: url('images/shrimp-fork.jpg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: right;
-  transform: rotate(-15deg); /* rotate counterclockwise */
-  opacity: 0.6; /* adjust for visibility */
-  z-index: -1;
-}
-
-#mariscos * {
-  position: relative;
-  z-index: 1;
-}
 
 
 
@@ -890,9 +896,6 @@ body.home #logo {
 
 /* homepage gallery  */
 
-html, body{
-  overflow-x: hidden;
-}
 
 .home-gallery {
   position: relative;

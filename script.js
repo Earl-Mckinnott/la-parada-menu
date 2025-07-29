@@ -189,15 +189,34 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-const menuDropdown = document.querySelector('.menu-dropdown');
+
+
+const menuBtn = document.querySelector('.menu-dropdown');
 
 window.addEventListener('scroll', () => {
-  // how far the page has scrolled
   const scrollY = window.scrollY;
 
-  // clamp between 5rem (top position) and 15rem (original position)
-  const topPosition = Math.max(-2.5, 15 - scrollY * 0.064); 
-  // tweak 0.05 for how fast it moves upward
+  const startTop = 17.6; // same as CSS top
+  const endTop = 0.5;      // final resting position
+  const speed = 0.06;    // tweak speed (higher = moves up faster)
 
-  menuDropdown.style.top = `${topPosition}rem`;
+  let newTop = startTop - scrollY * speed;
+  if (newTop < endTop) newTop = endTop;
+
+  menuBtn.style.top = `${newTop}rem`;
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('.menu-section');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 }); // trigger when 10% of the section is visible
+
+  sections.forEach(section => observer.observe(section));
 });
