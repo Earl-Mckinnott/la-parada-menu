@@ -463,8 +463,9 @@ section h2 {
   position: fixed; /* stays at top while scrolling */
   top: 17.6rem;
   
-  transform: translateX(-50%) !important;
-  left: 50% !important ;
+  inset-inline: 0;
+  margin-inline: auto;
+  width: fit-content;
   z-index: 1000;
   text-align: center;
   

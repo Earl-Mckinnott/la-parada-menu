@@ -209,8 +209,7 @@ function updateMenuBtnPosition() {
   const newTop = startTop - (startTop - endTop) * progress;
 
   menuBtn.style.top = `${newTop}rem`;
-  menuBtn.style.left= '50%';
-  menuBtn.style.transform = 'translateX(-50%)';
+ 
 
   ticking = false;
 }
