@@ -31,7 +31,7 @@ body {
     background-color: #ff9900;
     line-height:1.6;
     padding: 1rem;
-    max-width: 700px;
+    max-width: 1000px;
     margin: 0 auto;
     
 }
@@ -169,27 +169,11 @@ body.menu-view #main-nav {
 }
 
 
-.menu-content-wrapper {
-  position: relative;
-  overflow: visible;
-  min-height: 0px;
-  height: auto;
-  padding-bottom: 0rem;
-}
+
 
 /* ANTOJITOS */
 
-#antojitos-banner {
-  opacity: 0;
-  transform: translateX(-50%) translateY(2rem);
-  pointer-events: none;
-  position: fixed;
-  top: -4.5rem;
-  left: 73%;
-  width: 55%;
-  max-width: 65%;
-  z-index: 30;
-}
+
 
 @keyframes slideInFromRight {
   from {
@@ -266,22 +250,6 @@ body.antojitos-open #antojitos-banner {
 }
 
 
-/* Sopas banner */
-#sopas-banner {
-  opacity: 0;
-  transform: translateX(-50%) translateY(2rem);
-  pointer-events: none;
-  position: fixed;
-  top: 4rem;
-  left: 73%;
-  width: 40%;
-  max-width: 65%;
-  z-index: 30;
-}
-body.sopas-open #sopas-banner {
-  animation: slideInFromRight 0.9s ease forwards;
-  pointer-events: auto;
-}
 
 
 
@@ -312,27 +280,8 @@ body.sopas-open #sopas-banner {
   color: #444;
 }
 
-.menu-page {
-  overflow-y: auto;
-  scrollbar-width: thin;              /* For Firefox */
-  scrollbar-color: #767676b5 #f0f0f0;   /* Thumb and track */
-}
 
-/* Chrome, Edge, Safari */
-.menu-page::-webkit-scrollbar {
-  width: 6px;
-}
 
-.menu-page::-webkit-scrollbar-track {
-  background: #f0f0f0;
-  border-radius: 4px;
-}
-
-.menu-page::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,0.5);
-  border-radius: 8px;
-  box-shadow: inset 0 0 4px rgba(0,0,0,0.3);
-}
 
 .menu-page h3 {
   text-align: center;
@@ -344,10 +293,7 @@ body.sopas-open #sopas-banner {
 
 /* Menu Page Overlay */
 .menu-page {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 100%);
+  
   width: 90%;
   max-width: 600px;
   max-height: 80vh;
@@ -356,11 +302,9 @@ body.sopas-open #sopas-banner {
   padding-right: 1rem;
   border-radius: 2rem;
   box-shadow: 4px 3px  rgba(145, 255, 0, 0.586);
-  opacity: 0;
-  pointer-events: none;
-  transition: transform 0.35s ease-out, opacity 0.2s ease-out;
-  overflow: hidden;
-  overflow-y: auto;
+  
+  
+  
   z-index: 20;
   scroll-behavior: smooth;
   /* animation: fadeSlideUp 0.6s ease-out forwards; */ /* Removed fade animation for slide-in effect */
@@ -475,7 +419,7 @@ section h2 {
 .menu-heading {
   position: relative;
   margin-top: -2rem; /* or try -2rem if needed */
-  margin-bottom:-2.5rem;
+  margin-bottom:2.5rem;
   text-align: center;
   font-size: 1.8rem; /* tweak for size if you want */
   font-style:italic;
@@ -513,6 +457,111 @@ section h2 {
   animation-delay: 0.6s;
   opacity: 0;
 }
+
+
+
+/* MENU DROPDOWN */
+
+.menu-dropdown {
+  position: fixed; /* stays at top while scrolling */
+  top: 15rem;
+  
+  transform: translateX(-50%) !important;
+  left: 50% !important ;
+  z-index: 1000;
+  text-align: center;
+  margin-top: 2.5rem;
+  display: block;
+  justify-content: center;
+  margin-bottom: 1rem;
+ 
+   opacity: 0;                 /* start hidden */
+  animation: fadeSlideDown 0.7s ease forwards;
+  animation-delay: 0.5s;      /* slight delay if you want */
+
+}
+
+@keyframes fadeSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-toggle {
+  position: relative;
+  margin: 0 auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1px;
+  width: 45px;  /* size of the button */
+  height: 33px; /* total height of 3 bars + spacing */
+}
+
+.dropdown-toggle span {
+  display: block;
+  height: 2px;
+  background-color: #000000; /* color of bars */
+  border-radius: 2px;
+  width: 100%;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff4dc;
+  border-radius: 10px;
+  padding: 0 1rem;
+  z-index: 1000;
+  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  min-width: 300px;
+}
+
+.dropdown-list.show {
+  max-height: 500px;   /* enough to reveal all links */
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.dropdown-list a {
+  display: block;
+  padding: 0.4rem 1rem;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1eb600;
+}
+
+.dropdown-list a:hover {
+  background-color: #ffe7a1;
+  border-radius: 3px;
+}
+
+
+
+
 
 .menu-nav-right {
   margin-right: -0.8rem;
@@ -583,7 +632,13 @@ section h2 {
   text-decoration: underline;
 }
 
-
+.menu-section {
+  padding: 1rem;
+  margin: 2rem 0;
+  background: #c2bfb5;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
 
 .menu-section ul {
@@ -598,10 +653,13 @@ section h2 {
   justify-content: space-between;
   align-items: flex-start;
   padding: 1rem 0;
-  border-bottom: 1px solid #e0e0e0;
+  
   font-size: 1.1rem;
   gap: 1rem;
 }
+
+
+
 
 .item-name {
   font-weight: 600;
@@ -639,29 +697,25 @@ section h2 {
 }
 
 .menu-section {
-  margin-bottom: 3rem;
-  max-width: 95%;
-  padding: 0 1rem;
+  padding-top: 0.2rem;
+  padding-bottom: 3rem;           /* was 1rem – adds more breathing room */
+  margin: 1rem auto;       /* centers horizontally */
+  background: #ffede4ae;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 100%;          /* keep a consistent width */
+  min-height: 200px;       /* optional: force them a bit taller */
 }
 
 .menu-section h3 {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   font-weight: 600;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 0.3rem;
+  border-bottom: 2px solid #08b9d4;
+  padding-bottom: 0.9rem;
+  
 }
 
-.menu-nav-container {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: none;
-  box-shadow: none;
-  border-radius: 0;
-  padding-top: 0;
-  margin-top: 1rem;
-  max-width: 95%;
-}
+
 
 /* Removed background-color, border-radius, box-shadow, and padding-top, margin-top updated */
 
@@ -848,7 +902,6 @@ html, body{
   margin-top: 1rem;
   border-radius: 8px;
   background-color: rgba(244, 229, 128, 0);
-  overflow: hidden;
   z-index: 1;
 
 }
@@ -957,36 +1010,9 @@ html, body{
 
 
 
-/* Blinking down arrow scroll indicator for specific menu pages */
 
-.scroll-down-arrow {
-  position: fixed;
-  bottom: 65px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.5rem;
-  color: rgba(255, 0, 0, 0.757);
-  animation: blinkScrollArrow 1.5s ease-in-out infinite;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.4s ease;
-}
 
-body.antojitos-open .scroll-down-arrow,
-body.sopas-open .scroll-down-arrow,
-body.almuerzo-open .scroll-down-arrow,
-body.carnes-open .scroll-down-arrow,
-body.bebidas-open .scroll-down-arrow {
-  opacity: 1;
-  visibility: visible;
-}
 
-@keyframes blinkScrollArrow {
-  0%, 100% { opacity: 0.2; }
-  50% { opacity: 1; }
-}
 
 #splash-screen {
   /* circular mask */
@@ -997,7 +1023,7 @@ body.bebidas-open .scroll-down-arrow {
 
 
 #splash-screen.reveal {
-  clip-path: circle(0% at 50% 43%);
+  clip-path: circle(0% at 50% 45%);
   opacity: 0;
 }
 

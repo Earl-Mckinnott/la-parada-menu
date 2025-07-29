@@ -29,7 +29,7 @@
   <a href="menu-en.html" class="lang-btn">EN</a>
 </div>
 
-         
+        
          <!-- Hero Section -->
           <header id="hero">
             
@@ -71,29 +71,34 @@
               <a id="home-btn" href="index.html" aria-label="Home"></a>
                 <h2 class="menu-heading">Menu</h2>
                 <!-- Subcategory Navigation -->
-<div class="menu-nav-container">
-<div class="menu-nav">
-  <button class="menu-btn menu-nav-left" data-target="antojitos">Antojitos</button>
-  <button class="menu-btn menu-nav-right" data-target="ensaladas">Ensaladas</button>
-  <button class="menu-btn menu-nav-left" data-target="desayuno">Desayuno</button>
-  <button class="menu-btn menu-nav-right" data-target="almuerzo">Almuerzo</button>
-  <button class="menu-btn menu-nav-left" data-target="carnes">Carnes</button>
-  <button class="menu-btn menu-nav-right" data-target="mariscos">Mariscos</button>
-  <button class="menu-btn menu-nav-left" data-target="sandwiches">Sándwiches</button>
-  <button class="menu-btn menu-nav-right" data-target="sopas">Sopas</button>
-  <button class="menu-btn menu-nav-left" data-target="bebidas">Bebidas</button>
-  <button class="menu-btn menu-nav-right" data-target="picaderas">Picaderas</button>
+
+ <div class="menu-dropdown" >
+  <button class="dropdown-toggle" aria-label="Menu sections">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="dropdown-list">
+    <a href="#antojitos">Antojitos</a>
+    <a href="#almuerzo">Almuerzo</a>
+    <a href="#desayuno">Desayuno</a>
+    <a href="#sopas">Sopas</a>
+    <a href="#carnes">Carnes</a>
+    <a href="#ensaladas">Ensaladas</a>
+    <a href="#mariscos">Mariscos</a>
+    <a href="#bebidas">Bebidas</a>
+    <a href="#picaderas">Picaderas</a>
+  </div>
 </div>
 
-<!-- Subcategory Pages (Hidden by Default) -->
-  <div class="menu-content-wrapper">
-     <img id="antojitos-banner" src="images/antojitos-banner.png" alt="Antojitos Banner">
-      <img src="images/sancocho.png" alt="Sancocho" id="sopas-banner">
 
-    <div class="menu-page" id="antojitos">
-      <button class="back-btn">← Volver</button>
-                <!-- Antojitos -->
   
+     
+ 
+
+    
+                <!-- Antojitos -->
+  <section id="antojitos" class="menu-section">
  <h3>Antojitos</h3>
   <ul>
     <li><span class="item-name">Pastelito de Pollo y Queso</span><span class="item-price">$2.00</span></li>
@@ -105,12 +110,12 @@
     <li><span class="item-name">Alcapurria de Yuca</span><span class="item-price">$2.50</span></li>
     <li><span class="item-name">Papa Rellena</span><span class="item-price">$2.50</span></li>
   </ul>
-</div>
+  </section>
+
 
   
 <!-- Ensaladas -->
- <div class="menu-page" id="ensaladas">
-      <button class="back-btn">← Volver</button>
+ <section id="ensaladas" class="menu-section">
   <h3>Ensaladas</h3>
   <ul>
     <li><span class="item-name">Verde</span><span class="item-price">$4.00</span></li>
@@ -120,11 +125,12 @@
     <li><span class="item-name">De Pulpo</span><span class="item-price">$16.00</span></li>
     <li><span class="item-name">De Pollo</span><span class="item-price">$13.00</span></li>
   </ul>
-</div>
+</section>
+
+
 
   <!-- Desayuno -->
-<div class="menu-page" id="desayuno">
-  <button class="back-btn">← Volver</button>
+<section id="desayuno" class="menu-section">
   <h3>Desayuno</h3>
   <ul>
     <li><span class="item-name">3 Golpes de Mangu</span><span class="item-price">$9.00</span></li>
@@ -132,11 +138,10 @@
     <li><span class="item-name">5 Golpes de Mangu</span><span class="item-price">$11.00</span></li>
     <li><span class="item-name">6 Golpes de Mangu</span><span class="item-price">$12.00</span></li>
   </ul>
-</div>
+</section>
 
   <!-- Almuerzo -->
-<div class="menu-page almuerzo" id="almuerzo">
-  <button class="back-btn">← Volver</button>
+<section id="almuerzo" class="menu-section">
   <h3>Almuerzo (Lunch Especial)</h3>
   <ul>
     <li><span class="item-name">De Pollo</span><span class="item-price">$8.00</span></li>
@@ -152,11 +157,10 @@
     <li><span class="item-name">De Bacalao</span><span class="item-price">$9.00</span></li>
     <li><span class="item-name">De Espaguettis</span><span class="item-price">$9.00</span></li>
   </ul>
-</div>
+</section>
 
   <!-- Carnes -->
-<div class="menu-page carnes" id="carnes">
-  <button class="back-btn">← Volver</button>
+<section id="carnes" class="menu-section">
   <h3>Carnes Sola</h3>
   <ul>
     <li><span class="item-name">Bistec Encebollado</span><span class="item-price">$14.00</span></li>
@@ -179,11 +183,12 @@
     <li><span class="item-name">Pernil Grande</span><span class="item-price">$10.00</span></li>
     <li><span class="item-name">Patita De Cerdo</span><span class="item-price">$10.00</span></li>
   </ul>
-</div>
+</section>
+
+
 
   <!-- Mariscos -->
-<div class="menu-page" id="mariscos">
-  <button class="back-btn">← Volver</button>
+<section id="mariscos" class="menu-section">
   <h3>Mariscos</h3>
   <ul>
     <li><span class="item-name">Camarones en Salsa</span><span class="item-price">$12.00</span></li>
@@ -194,11 +199,12 @@
     <li><span class="item-name">Bacalao Guisado</span><span class="item-price">$12.00</span></li>
     <li><span class="item-name">Bacalao Salteado</span><span class="item-price">$12.00</span></li>
   </ul>
-</div>
+</section>
+
+
 
   <!-- Sandwiches -->
-<div class="menu-page" id="sandwiches">
-  <button class="back-btn">← Volver</button>
+<section id="sandwiches" class="menu-section">
   <h3>Sándwiches</h3>
   <ul>
     <li><span class="item-name">Cubano</span><span class="item-price">$7.00</span></li>
@@ -206,11 +212,12 @@
     <li><span class="item-name">Bistec</span><span class="item-price">$5.00</span></li>
     <li><span class="item-name">Tripleta</span><span class="item-price">$8.00</span></li>
   </ul>
-</div>
+</section>
+
+
 
   <!-- Sopas -->
-<div class="menu-page" id="sopas">
-  <button class="back-btn">← Volver</button>
+<section id="sopas" class="menu-section">
   <h3>Sopas</h3>
   <ul>
     <li><span class="item-name">Sancocho</span><span class="item-price">$10.00</span></li>
@@ -222,12 +229,12 @@
     <li><span class="item-name">Asopado De Marisco</span><span class="item-price">$15.00</span></li>
     <li><span class="item-name">Asopado De Camarones</span><span class="item-price">$12.00</span></li>
   </ul>
-</div>
+</section>
+
 
 
   <!-- Bebidas -->
-<div class="menu-page bebidas" id="bebidas">
-  <button class="back-btn">← Volver</button>
+<section id="bebidas" class="menu-section">
   <h3>Bebidas</h3>
 
   <h4>Naturales</h4>
@@ -252,12 +259,11 @@
     <li><span class="item-name">Avena Grande</span><span class="item-price">$8.00</span></li>
     <li><span class="item-name">Avena</span><span class="item-price">$4.00</span></li>
   </ul>
-</div>
+</section>
 
 
   <!-- Picaderas -->
-  <div class="menu-page" id="picaderas">
-  <button class="back-btn">← Volver</button>
+  <section id="picaderas" class="menu-section">
     <h3>Picaderas</h3>
     <ul>
       <li> <span class = "item-name">Pequena</span>
@@ -267,13 +273,31 @@
       <li> <span class = "item-name">Grande</span>
         <span class="item-price">$80.00</span></li>
     </ul>
-  </div>
-  </div>
+  </section>
+  
 
-  <div class="scroll-down-arrow">↓</div>
+
 
              </section>
+<script>
+  const toggleBtn = document.querySelector('.dropdown-toggle');
+  const dropdown = document.querySelector('.dropdown-list');
 
+  toggleBtn.addEventListener('click', () => {
+    dropdown.classList.toggle('show');
+  });
+
+  // optional: smooth scrolling
+  document.querySelectorAll('.dropdown-list a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      dropdown.classList.remove('show');
+
+const target = document.querySelector(link.getAttribute('href'));
+target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
 
                 <script src="script.js"></script>
 
