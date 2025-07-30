@@ -35,7 +35,7 @@ html {
 
 body {
     font-family : system-ui, sans-serif;
-    background-color: #ff9900;
+    background-color: #FFD45B;
     line-height:1.6;
     padding: 1rem;
     max-width: 100%;
@@ -54,9 +54,9 @@ body {
 .location-text {
   text-align: center;
   font-family: system-ui, serif;
-  font-size: 1.1rem;
-  color: #000000;
-  margin-top: -6.5rem;
+  font-size: 1rem;
+  color: #ffffff;
+  margin-top: -6.9rem;
   margin-bottom: 3rem;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -64,13 +64,13 @@ body {
 
 
 .location-underline {
-  width: 100%;
-  height: 2px;
-  background-color: #000000; /* sleek gray */
-  margin: -2.8rem auto 5.7rem; /* move it closer to the SVG */
+  width: 70%;
+  height: 3px;
+  background-color: #ffffff; /* sleek gray */
+  margin: -2.7rem auto 5.7rem; /* move it closer to the SVG */
   border-radius: 2px;
   opacity: 0.85;
-  margin-bottom: 5.2rem;
+  margin-bottom: 6.2rem;
 }
 
 
@@ -100,21 +100,22 @@ body {
 
 
 .home #main-nav {
-  margin-top: -2.8rem; /* adjust this until it visually matches other pages */
+  margin-top: -3.4rem; /* adjust this until it visually matches other pages */
 }
 
 #main-nav ul li a {
   display: inline-block;
-  background-color: #ffedb6eb;
+  background-color: #ffffffeb;
   padding: 0rem 1rem 0rem !important;  /* force */
   line-height: 1.4;
   border-radius: 20px;
   text-decoration: none;
   color: #111;
   font-weight: 500;
+  font-family: 'Poppins', sans-serif;
   transition: background-color 0.3s ease;
-  box-shadow: 0 1px 6px rgb(255, 230, 0)
-  ;
+  box-shadow: 0 1px 6px rgb(255, 230, 0);
+ margin:  -3rem 1rem ;
 }
 
 #main-nav ul li:first-child a {
@@ -140,26 +141,13 @@ body {
 
 
 
-#main-nav a {
- display: inline-block;
-    text-decoration: none;
-    color: #111;
-    font-weight: 500;
-    background-color: rgb(255, 60, 0);
-   
-    margin: -1rem 0rem;   /* reduce vertical margin between items */
-    
-}
 
-#main-nav li {
-    margin: 0.1rem 0.4rem;
-    padding: 0;
-   /* ← add horizontal space between buttons */
-}
+
+
 
 #main-nav {
   transition: margin-top 0.4s ease, transform 0.8s ease;
-  margin-bottom: -1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 #main-nav.fade-out {
@@ -320,16 +308,7 @@ body.antojitos-open #antojitos-banner {
   pointer-events: auto;
 }
 
-.back-btn {
-  display: inline-block;
-  margin-bottom: 1rem;
-  background: #ff914d;
-  color: white;
-  border: none;
-  padding: 0.2rem 0.8rem;
-  border-radius: 10px;
-  cursor: pointer;
-}
+
 
 
 #hero h1 {
@@ -812,6 +791,12 @@ margin-top: 0.5rem;
   animation:breathe 3s ease-in-out infinite;
 }
 
+#logo-wrapper {
+  transform: scale(0.9);
+  transform-origin: center top;
+}
+
+
 body.home #logo {
   opacity: 0;
   animation:
@@ -845,7 +830,7 @@ body.home #logo {
 }
 
 .logo-big-svg {
-  fill: #ffd500;
+  fill: #ffc800;
   stroke: rgb(255, 255, 255);
   stroke-width: 2px;
   paint-order: stroke fill;
@@ -911,10 +896,10 @@ body.home #logo {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 100%; /* adjust as needed */
-  margin-top: 1rem;
+  height: 250px; /* adjust as needed */
+  margin-top: -2.2rem;
   border-radius: 8px;
-  background-color: rgba(244, 229, 128, 0);
+  background-color: rgba(255, 255, 255, 0);
   z-index: 1;
 
 }
@@ -923,12 +908,12 @@ body.home #logo {
   display: flex;
   width: max-content;
   will-change: transform;
-  gap :8px;
+  gap :10px;
 }
 
 .gallery-track img {
-  max-height: 100%;
-  max-width: 160px;
+  height: 100%;
+  width: 188px;
   flex-shrink: 0 0 auto;
   object-fit: contain;
 }
@@ -979,11 +964,10 @@ body.home #logo {
   display: flex;                 /* flex container */
   justify-content: center;       /* center horizontally */
   align-items: center;           /* center vertically */
-  background-color: #ffeebaeb;
+  background-color: #ffffffeb;
   width: 60px;   /* fixed size so it stays a perfect circle */
   height: 60px;
   border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.304);
   overflow: hidden;
   transition: transform 0.2s ease;
 }
@@ -1075,12 +1059,14 @@ color: rgb(237, 24, 0);
 .rotating-text {
   text-align: center;
   font-size: 1.7rem;
-  margin: 1.5rem 0 1rem 0 ;
+  margin: 1.2rem 0 2rem 0 ;
   font-weight: 800;
-  color: #ccff00;
+  color: #ff0000e7;
   min-height: 1.5em;
+  font-family: 'Poppins', sans serif;
 
 }
+
 
 .rotating-text span {
   transition: opacity 0.3s ease;
