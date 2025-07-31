@@ -46,7 +46,8 @@ body {
   background-size: cover;       /* fill screen */
   background-position: center;  /* center the crop */
   background-repeat: no-repeat; /* no tiling */
-  background-attachment: fixed; /* stays fixed on desktop (optional) */
+  background-attachment: scroll; /* stays fixed on desktop (optional) */
+  min-height: 100vh
 
 }
 
