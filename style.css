@@ -35,12 +35,19 @@ html {
 
 body {
     font-family : system-ui, sans-serif;
-    background-color: #FFD45B;
+    background-color: #119ce7;
     line-height:1.6;
-    padding: 1rem;
-    max-width: 100%;
-    margin: 0 auto;
-    
+    margin: 0;
+
+    /* background image */
+  background-image: url("images/bg.jpg");
+
+  /* how it behaves */
+  background-size: cover;       /* fill screen */
+  background-position: center;  /* center the crop */
+  background-repeat: no-repeat; /* no tiling */
+  background-attachment: fixed; /* stays fixed on desktop (optional) */
+
 }
 
 
@@ -121,6 +128,7 @@ body {
 #main-nav ul li:first-child a {
   animation: wobble 6s ease-in-out infinite;
   animation-delay: 9s; /* waits 3 seconds before the first wobble */
+  margin-left: 1.5rem;
 }
 
 @keyframes wobble {
@@ -147,7 +155,7 @@ body {
 
 #main-nav {
   transition: margin-top 0.4s ease, transform 0.8s ease;
-  margin-bottom: 1.5rem;
+  margin-bottom: -2rem;
 }
 
 #main-nav.fade-out {
@@ -588,7 +596,7 @@ margin-top: 0.5rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
   list-style: none;
   padding: 0;
   margin: -0.5rem 0.5rem;
@@ -788,11 +796,12 @@ margin-top: 0.5rem;
   align-items: center;
   text-align: center;
   margin: 0 auto;
+  margin-bottom: -1.5rem;
   animation:breathe 3s ease-in-out infinite;
 }
 
 #logo-wrapper {
-  transform: scale(0.9);
+  transform: scale(0.75);
   transform-origin: center top;
 }
 
@@ -895,25 +904,25 @@ body.home #logo {
 .home-gallery {
   position: relative;
   overflow: hidden;
-  width: 100%;
+  width: calc(100% - .9rem);
   height: 250px; /* adjust as needed */
-  margin-top: -2.2rem;
+  margin: 0 auto;
+  margin-top:-2rem;
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 0, 0, 0);
   z-index: 1;
-
 }
 
 .gallery-track {
   display: flex;
   width: max-content;
   will-change: transform;
-  gap :10px;
+  gap :16px;
 }
 
 .gallery-track img {
   height: 100%;
-  width: 188px;
+  width: 189px;
   flex-shrink: 0 0 auto;
   object-fit: contain;
 }
@@ -955,8 +964,9 @@ body.home #logo {
   justify-content: center;
   align-items: center;  /* vertically align */
   flex-direction: row;  /* make sure it's horizontal */
-  gap: 3rem;            /* space between icons */
+  gap: 6.5rem;            /* space between icons */
   margin: 1rem 0;
+  margin-bottom: 4rem;
 }
 
 .call-button,
@@ -1058,12 +1068,14 @@ color: rgb(237, 24, 0);
 
 .rotating-text {
   text-align: center;
-  font-size: 1.7rem;
-  margin: 1.2rem 0 2rem 0 ;
+  font-size: 2rem;
+  margin: 2.5rem 0 4rem 0 ;
   font-weight: 800;
-  color: #ff0000e7;
+  color: #ffe100;
   min-height: 1.5em;
   font-family: 'Poppins', sans serif;
+  background-color: rgba(255, 0, 0, 0);
+   
 
 }
 
@@ -1083,6 +1095,7 @@ color: rgb(237, 24, 0);
   width: 100%;
   position: relative;
   top: -0.5rem;
+  padding-top: 1rem;
 }
 
 .logo-flags img {
@@ -1103,7 +1116,7 @@ color: rgb(237, 24, 0);
 .logo-flags img.flag-left,
 .logo-flags img.flag-right {
   position: relative;
-  top: -2.2rem; /* move only the flags upward */
+  top: -1.2rem; /* move only the flags upward */
 }
 
 .logo-flags > #logo {
