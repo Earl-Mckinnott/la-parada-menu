@@ -45,18 +45,15 @@ body {
     margin: 0;
 }
 
-.fixed-bg {
+.bg-image {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100svh;
-  height: 100vh;
-  z-index: -1; /* behind everything */
-  background-image: url("images/bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 100%;
+  object-fit: cover;   /* fill entire screen, crop if necessary */
+  z-index: -1;         /* stays behind everything */
+  pointer-events: none;/* clicks pass through */
 }
 
 
