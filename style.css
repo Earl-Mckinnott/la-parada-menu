@@ -126,9 +126,9 @@ body {
   text-decoration: none;
   color: rgb(255, 213, 26);
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 2.3rem;
   transition: background-color 0.3s ease;
- margin:  -2rem 1.5rem ;
+ margin:  -2rem 1rem ;
  text-shadow: 
     1px 1px 3px rgba(0, 0, 0, 0.774),
     -1px -1px 4px rgba(0, 0, 0, 0.735);
@@ -143,7 +143,7 @@ body {
 #main-nav ul li:first-child a {
   animation: wobble 6s ease-in-out infinite;
   animation-delay: 9s; /* waits 3 seconds before the first wobble */
-  margin-left: 2.5rem;
+  margin-left: 1.5rem;
 }
 
 @keyframes wobble {
