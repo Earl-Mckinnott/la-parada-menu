@@ -204,3 +204,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sections.forEach(section => observer.observe(section));
 });
+
+
+
+
+function setBgHeight() {
+  const bg = document.querySelector('.fixed-bg');
+  if (!bg) return;
+  bg.style.height = window.innerHeight + 'px';
+}
+window.addEventListener('resize', setBgHeight);
+window.addEventListener('orientationchange', setBgHeight);
+setBgHeight();
