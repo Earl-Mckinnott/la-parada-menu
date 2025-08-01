@@ -113,28 +113,37 @@ body {
 
 
 .home #main-nav {
-  margin-top: -3.4rem; /* adjust this until it visually matches other pages */
+  margin-top: -4rem; /* adjust this until it visually matches other pages */
 }
 
 #main-nav ul li a {
   display: inline-block;
-  background-color: #ffffffeb;
-  padding: 0rem 1rem 0rem !important;  /* force */
+  text-decoration: none;
+  text-align: center;
+ font-style: italic;
   line-height: 1.4;
   border-radius: 20px;
   text-decoration: none;
-  color: #111;
-  font-weight: 500;
-  font-family: 'Poppins', sans-serif;
+  color: rgb(255, 213, 26);
+  font-weight: 700;
+  font-size: 2rem;
   transition: background-color 0.3s ease;
-  box-shadow: 0 1px 6px rgb(255, 230, 0);
- margin:  -3rem 1rem ;
+ margin:  -2rem 1.5rem ;
+ text-shadow: 
+    1px 1px 3px rgba(0, 0, 0, 0.774),
+    -1px -1px 4px rgba(0, 0, 0, 0.735);
 }
+
+#main-nav ul li {
+  flex: 1; /* let each button take up equal horizontal space */
+  min-width: 80px; /* optional: don’t shrink smaller than this */
+}
+
 
 #main-nav ul li:first-child a {
   animation: wobble 6s ease-in-out infinite;
   animation-delay: 9s; /* waits 3 seconds before the first wobble */
-  margin-left: 1.5rem;
+  margin-left: 2.5rem;
 }
 
 @keyframes wobble {
@@ -161,7 +170,7 @@ body {
 
 #main-nav {
   transition: margin-top 0.4s ease, transform 0.8s ease;
-  margin-bottom: -2rem;
+  margin-bottom:-2rem;
 }
 
 #main-nav.fade-out {
@@ -337,21 +346,18 @@ body.antojitos-open #antojitos-banner {
 
 /* Navigation */
 #main-nav ul {
-    list-style:none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1rem 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap; /* prevent wrapping */
+  justify-content: center;
+  gap: -1rem;
+  padding: 0;
+  margin: -0.5rem 0.5rem;
 }
 
 
 
 
-
-/* .menu-view.shrunk #main-nav {
-  margin-top: -4.5rem;
-} */
 
 .about-page #main-nav {
   margin-top: -4.5rem;
@@ -415,30 +421,39 @@ section h2 {
 
 .menu-heading {
   position: relative;
-  margin-top: -2.45rem; /* or try -2rem if needed */
+  margin-top: -3.45rem; /* or try -2rem if needed */
   margin-bottom:3rem;
   text-align: center;
-  font-size: 1.8rem; /* tweak for size if you want */
+  font-size: 2rem; /* tweak for size if you want */
   font-style:italic;
   animation: fadeSlideUp 0.6s ease-out forwards;
   animation-delay: 0.2s;
   opacity: 0;
+  color: rgb(255, 213, 26);
+
+text-shadow: 
+    1px 1px 3px rgba(0, 0, 0, 0.774),
+    -1px -1px 4px rgba(0, 0, 0, 0.735);
+
 }
 #home-btn {
   position: absolute;
-  top: -3.3rem;     /* adjust distance from the top of menu header */
+  top: -2.4rem;     /* adjust distance from the top of menu header */
   left: 50%;      /* center horizontally */
   transform: translateX(-50%);
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 40px;
   background-image: url('images/home-icon.png');
-  background-size: contain;
+  background-position: center;
+  background-size: 75%;
   background-repeat: no-repeat;
   border: none;
   text-indent: -9999px;
-
+background-color: rgb(199, 8, 8);
+border-radius: 1rem;
   opacity: 0;
   transition: opacity 1s ease;
+  
 }
 
 .menu-nav {
@@ -490,7 +505,7 @@ section h2 {
 
 
 .menu-dropdown .dropdown-toggle {
-  background-color: #d23205; /* light background */
+  background-color: rgb(199, 8, 8); /* light background */
   padding: 0.5rem;
   border-radius: 50%; /* perfect circle */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.176);
@@ -598,27 +613,24 @@ margin-top: 0.5rem;
   gap: 2rem;
 }
 
-#main-nav ul {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  list-style: none;
-  padding: 0;
-  margin: -0.5rem 0.5rem;
-}
 
-#main-nav a {
-  font-family: 'Georgia', serif; /* 👈 matches the logo font */
-  font-weight: bold;
-  font-style: italic;
-  font-size: 1.6rem;
-  color: rgb(242, 255, 0);
-  text-decoration: none;
-  background-color: none;
-  border-radius: 4px;
-  padding: 0.2rem 0.2rem;
-  transition: color 0.3s ease;
+
+.menu-heading {
+  position: relative;
+  margin-top: -3.45rem; /* or try -2rem if needed */
+  margin-bottom:3rem;
+  text-align: center;
+  font-size: 2rem; /* tweak for size if you want */
+  font-style:italic;
+  animation: fadeSlideUp 0.6s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+  color: rgb(255, 213, 26);
+
+text-shadow: 
+    1px 1px 3px rgba(0, 0, 0, 0.774),
+    -1px -1px 4px rgba(0, 0, 0, 0.735);
+
 }
 
 #main-nav a:hover {
@@ -657,6 +669,8 @@ margin-top: 0.5rem;
 }
 
 .menu-section {
+  width: 90%;
+  max-width: 800px;
   padding: 1rem;
   margin: 2rem 0;
   background: #c2bfb5;
@@ -682,7 +696,7 @@ margin-top: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 1rem 0;
+  padding: .8rem 0;
   
   font-size: 1.1rem;
   gap: 1rem;
@@ -910,8 +924,8 @@ body.home #logo {
 .home-gallery {
   position: relative;
   overflow: hidden;
-  width: calc(100% - .9rem);
-  height: 250px; /* adjust as needed */
+  width: calc(100% - 1.5rem);
+  height: 230px; /* adjust as needed */
   margin: 0 auto;
   margin-top:-2rem;
   border-radius: 8px;
@@ -928,9 +942,12 @@ body.home #logo {
 
 .gallery-track img {
   height: 100%;
-  width: 189px;
+  width: 174px;
   flex-shrink: 0 0 auto;
   object-fit: contain;
+  border: 3.5px solid rgb(255, 255, 255);
+  box-sizing: border-box;
+  border-radius: 20px;
 }
 
 
@@ -970,9 +987,10 @@ body.home #logo {
   justify-content: center;
   align-items: center;  /* vertically align */
   flex-direction: row;  /* make sure it's horizontal */
-  gap: 6.5rem;            /* space between icons */
-  margin: 1rem 0;
-  margin-bottom: 4rem;
+  gap: 7.5rem;            /* space between icons */
+  margin: 0.3rem 0;
+  margin-bottom: 4.5rem;
+
 }
 
 .call-button,
@@ -989,8 +1007,8 @@ body.home #logo {
 }
 
 .call-button img {
-  width: 60%;
-  height: 60%;
+  width: 67%;
+  height: 67%;
   object-fit: contain;
 }
 
@@ -999,8 +1017,8 @@ body.home #logo {
 }
 
 .map-button img {
-  width: 70%;
-  height: 70%;
+  width: 75%;
+  height: 75%;
   object-fit: contain;
 }
 
