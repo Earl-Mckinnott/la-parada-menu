@@ -945,13 +945,13 @@ body.home #logo {
 
 #splash-screen {
   /* circular mask */
+  will-change: clip-path, opacity;
   clip-path: circle(150% at 50% 50%);
   transition: clip-path 1.5s ease, opacity 0.8s ease 1s; 
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 100vh;
   height: 100vh;  /* force it to fill the whole screen */
   background-color: #f3e5d0;
   display: flex;
@@ -1011,6 +1011,11 @@ color: #d9845f;
   background-color: rgba(255, 0, 0, 0);
 }
 
+#rotating-span {
+  line-height: 0.5;
+   margin: 0;
+  padding: 0;
+}
 
 .rotating-text span {
   transition: opacity 0.3s ease;

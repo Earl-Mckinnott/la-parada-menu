@@ -30,6 +30,7 @@ if (splash && sessionStorage.getItem('splashDone')) {
   if (splash && enter) {
     enter.addEventListener('click', () => {
       console.log('enter clicked')
+      splash.offsetHeight; 
       splash.classList.add('reveal');
 
       window.galleryShouldStart = true;
@@ -43,7 +44,7 @@ if (splash && sessionStorage.getItem('splashDone')) {
 
       setTimeout(() => {
         splash.style.display = 'none';
-      }, 1600); // matches transition duration
+      }, 1800); // matches transition duration
     });
   }
 });
@@ -131,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const rotatingSpan = document.getElementById('rotating-span');
 
   const phrases = [
-"𓂃 ོ⋆☀︎𓂃⛱",
+"𓂃 ོ⋆☀︎𓂃",
   "Bienvenido a",
   "la Parada del Sabor",
   "Comida casera.",
@@ -145,7 +146,6 @@ document.addEventListener('DOMContentLoaded', () => {
   "°‧ 𓆝 𓆟 𓆞 ·｡",
   "𓆝 ⋆.",
   "Hacemos catering.",
-  "𓂃 ོ⋆☀︎𓂃⛱"
 ];
 
   let index = 0;
