@@ -131,19 +131,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const rotatingSpan = document.getElementById('rotating-span');
 
   const phrases = [
+"𓂃 ོ⋆☀︎𓂃⛱",
   "Bienvenido a",
   "la Parada del Sabor",
   "Comida casera.",
   "Tu lugar favorito",
-  "está en Allentown.",
+  "en Allentown.",
   "Haz la fila",
   "o toma asiento.",
   "¡llámanos!",
   "hacemos delivery.",
   "Sancocho el fin de semana",
-  "...",
+  "°‧ 𓆝 𓆟 𓆞 ·｡",
+  "𓆝 ⋆.",
   "Hacemos catering.",
-  "..."
+  "𓂃 ོ⋆☀︎𓂃⛱"
 ];
 
   let index = 0;
