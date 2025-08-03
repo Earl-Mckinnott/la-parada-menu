@@ -21,10 +21,11 @@ galleryImages.forEach(src => {
   const splash = document.getElementById('splash-screen');
   const enter = document.querySelector('.enter-text');
   
-if (sessionStorage.getItem('splashDone')) {
-    splash.style.display = 'none';
-    return;
-  }
+if (splash && sessionStorage.getItem('splashDone')) {
+  splash.style.display = 'none';
+  return;
+}
+
 
   if (splash && enter) {
     enter.addEventListener('click', () => {
@@ -161,7 +162,9 @@ document.addEventListener('DOMContentLoaded', () => {
     },300); // matches transition time in CSS
   }
 
-  setInterval(showNextPhrase, 2700); // change every 3 seconds
+  if (rotatingSpan) {
+    setInterval(showNextPhrase, 2700);
+  }
 });
 
 

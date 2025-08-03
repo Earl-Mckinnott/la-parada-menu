@@ -4,11 +4,14 @@
         <meta charset ="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+
+<!-- SEARCHABILTY  SEARCHABILITY -->
         <title>Menu (English) - La Parada Del Sabor</title>
 <meta name="description" content="Explore the English version of La Parada Del Sabor's menu in Allentown, PA. Authentic Dominican food, drinks, and specials.">
 <meta name="keywords" content="La Parada Del Sabor, Dominican restaurant menu English, Allentown Dominican food, Latin food menu">
 <meta name="author" content="La Parada Del Sabor">
 <meta name="robots" content="index, follow">
+
 
 
 <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
@@ -21,28 +24,26 @@
     </head>
 
     <body class="menu-view">
-      <img src="images/bg.jpg" alt="" class="bg-image">
-
-      <!-- Preload Images -->
- <div style="display: none;">
-  <img src="images/ensaladas-banner.png" alt="Preload Ensaladas Banner">
- </div>
+<img src="images/bg.jpg" alt="" class="bg-image">
 
 
 
 
-        <!-- Language Toggle -->
-         <div id="language-toggle">
-  <a href="menu.html" class="lang-btn">ES</a>
-  <a href="menu-en.html" class="lang-btn active">EN</a>
+
+       <!-- Language Toggle -->
+<div id="language-toggle">
+  <a href="menu.html" class="lang-btn">ESP</a>
+  <a href="menu-en.html" class="lang-btn active">ENG</a>
 </div>
 
 
          <!-- Hero Section -->
           <header id="hero">
+
 <div class="logo-flags">
 <div class="flag-placeholder-left"></div>
 
+<div id="logo-wrapper">
             <div id="logo">
   <a href="index.html" class="logo-clickable">
     <span class="logo-line">La Parada</span>
@@ -63,6 +64,8 @@
   </text>
 </svg>
 </div>
+</div>
+
 <div class="flag-placeholder-right"></div>
 </div>
 
@@ -79,75 +82,36 @@
             <!-- Menu Section PH -->
              <section id="menu">
               <a id="home-btn" href="index.html" aria-label="Home"></a>
-                <h2 class="menu-heading">Menu</h2>
+                <h2 class="menu-heading">Menu★</h2>
+
+
                 <!-- Subcategory Navigation -->
-<div class="menu-nav-container">
-<div class="menu-nav">
-  <button class="menu-btn menu-nav-left" data-target="antojitos">Cravings</button>
-  <button class="menu-btn menu-nav-right" data-target="ensaladas">Salad</button>
-  <button class="menu-btn menu-nav-left" data-target="desayuno">Breakfast</button>
-  <button class="menu-btn menu-nav-right" data-target="almuerzo">Lunch</button>
-  <button class="menu-btn menu-nav-left" data-target="carnes">Meats</button>
-  <button class="menu-btn menu-nav-right" data-target="mariscos">Seafood</button>
-  <button class="menu-btn menu-nav-left" data-target="sandwiches">Sándwiches</button>
-  <button class="menu-btn menu-nav-right" data-target="sopas">Soups</button>
-  <button class="menu-btn menu-nav-left" data-target="bebidas">Drinks</button>
-  <button class="menu-btn menu-nav-right" data-target="picaderas">Picaderas</button>
+
+ <div class="menu-dropdown" >
+  <button class="dropdown-toggle" aria-label="Menu sections">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="dropdown-list">
+<a href="#desayuno">🍳∘ Breakfast</a>
+<a href="#almuerzo">🍽️∘ Lunch Special</a>
+    <a href="#antojitos">🍟∘ Cravings</a>
+    <a href="#sandwiches">🥪∘ Sandwiches</a>
+    <a href="#sopas">🍛∘ Soups</a>
+    <a href="#ensaladas">🥗∘ Salads</a>
+    <a href="#carnes">🍖∘ Meat</a>
+    <a href="#mariscos">🦐∘ Seafood</a>
+    <a href="#bebidas">🥤∘ Drinks</a>
+    <a href="#picaderas">🍴∘ Appetizer Trays</a>
+  </div>
 </div>
 
-<!-- Subcategory Pages (Hidden by Default) -->
-  <div class="menu-content-wrapper">
-         <img id="antojitos-banner" src="images/antojitos-banner.png" alt="Antojitos Banner">
-          <img src="images/sancocho.png" alt="Sancocho" id="sopas-banner">
-    <div class="menu-page" id="antojitos">
-      <button class="back-btn">← Back</button>
-                <!-- Antojitos -->
- 
-  <h3>Cravings</h3>
-  <ul>
-    <li><span class="item-name">Chicken and Cheese Pastelito</span><span class="item-price">$2.00</span></li>
-    <li><span class="item-name">Chicken Pastelito</span><span class="item-price">$2.00</span></li>
-    <li><span class="item-name">Beef and Cheese Pastelito</span><span class="item-price">$2.00</span></li>
-    <li><span class="item-name">Beef Pastelito</span><span class="item-price">$2.00</span></li>
-    <li><span class="item-name">Cheese Pastelito</span><span class="item-price">$2.00</span></li>
-    <li><span class="item-name">Green Banana Alcapurria</span><span class="item-price">$2.50</span></li>
-    <li><span class="item-name">Yuca (Casava) Alcapurria</span><span class="item-price">$2.50</span></li>
-    <li><span class="item-name">Potato Ball</span><span class="item-price">$2.50</span></li>
-  </ul>
-  <div class="scroll-down-arrow">↓</div>
-</div>
 
-  
-<!-- Ensaladas -->
- <div class="menu-page" id="ensaladas">
-      <button class="back-btn">← Back</button>
-  <h3>Salad</h3>
-  <ul>
-    <li><span class="item-name">Leaf (Green)</span><span class="item-price">$4.00</span></li>
-    <li><span class="item-name">Potato</span><span class="item-price">$4.00</span></li>
-    <li><span class="item-name">Elbow (Pasta)</span><span class="item-price">$4.00</span></li>
-    <li><span class="item-name">Shrimp</span><span class="item-price">$14.00</span></li>
-    <li><span class="item-name">Octopus</span><span class="item-price">$16.00</span></li>
-    <li><span class="item-name">Chicken</span><span class="item-price">$13.00</span></li>
-  </ul>
-</div>
-
-  <!-- Desayuno -->
-<div class="menu-page" id="desayuno">
-  <button class="back-btn">← Back</button>
-  <h3>Breakfast</h3>
-  <ul>
-    <li><span class="item-name">3 Sides & Mangu</span><span class="item-price">$9.00</span></li>
-    <li><span class="item-name">4 Sides & Mangu</span><span class="item-price">$10.00</span></li>
-    <li><span class="item-name">5 Sides & Mangu</span><span class="item-price">$11.00</span></li>
-    <li><span class="item-name">6 Sides & Mangu</span><span class="item-price">$12.00</span></li>
-  </ul>
-</div>
 
   <!-- Almuerzo -->
-<div class="menu-page" id="almuerzo">
-  <button class="back-btn">← Back</button>
-  <h3>Lunch Specials</h3>
+<section id="almuerzo" class="menu-section">
+  <h3>Lunch Special</h3>
   <ul>
     <li><span class="item-name">Chicken</span><span class="item-price">$8.00</span></li>
     <li><span class="item-name">Beef Stew</span><span class="item-price">$9.00</span></li>
@@ -162,13 +126,84 @@
     <li><span class="item-name">Cod Fish</span><span class="item-price">$9.00</span></li>
     <li><span class="item-name">Spagetti</span><span class="item-price">$9.00</span></li>
   </ul>
-  <div class="scroll-down-arrow">↓</div>
-</div>
+</section>
+
+
+
+<!-- Antojitos -->
+ <section id="antojitos" class="menu-section">
+  <h3>Cravings</h3>
+  <ul>
+    <li><span class="item-name">Chicken and Cheese Pastelito</span><span class="item-price">$2.00</span></li>
+    <li><span class="item-name">Chicken Pastelito</span><span class="item-price">$2.00</span></li>
+    <li><span class="item-name">Beef and Cheese Pastelito</span><span class="item-price">$2.00</span></li>
+    <li><span class="item-name">Beef Pastelito</span><span class="item-price">$2.00</span></li>
+    <li><span class="item-name">Cheese Pastelito</span><span class="item-price">$2.00</span></li>
+    <li><span class="item-name">Green Banana Alcapurria</span><span class="item-price">$2.50</span></li>
+    <li><span class="item-name">Yuca (Casava) Alcapurria</span><span class="item-price">$2.50</span></li>
+    <li><span class="item-name">Potato Ball</span><span class="item-price">$2.50</span></li>
+  </ul>
+</section>
+
+  
+
+  <!-- Desayuno -->
+<section id="desayuno" class="menu-section">
+  <h3>Breakfast</h3>
+  <ul>
+    <li><span class="item-name">3 Sides & Mangu</span><span class="item-price">$9.00</span></li>
+    <li><span class="item-name">4 Sides & Mangu</span><span class="item-price">$10.00</span></li>
+    <li><span class="item-name">5 Sides & Mangu</span><span class="item-price">$11.00</span></li>
+    <li><span class="item-name">6 Sides & Mangu</span><span class="item-price">$12.00</span></li>
+  </ul>
+</section>
+
+
+
+  <!-- Sandwiches -->
+<section id="sandwiches" class="menu-section">
+  <h3>Sandwiches</h3>
+  <ul>
+    <li><span class="item-name">Cuban</span><span class="item-price">$7.00</span></li>
+    <li><span class="item-name">Chicken</span><span class="item-price">$5.00</span></li>
+    <li><span class="item-name">Steak</span><span class="item-price">$5.00</span></li>
+    <li><span class="item-name">Triplet</span><span class="item-price">$8.00</span></li>
+  </ul>
+</section>
+
+
+<!-- Ensaladas -->
+ <section id="ensaladas" class="menu-section">
+  <h3>Salad</h3>
+  <ul>
+    <li><span class="item-name">Leaf (Green)</span><span class="item-price">$4.00</span></li>
+    <li><span class="item-name">Potato</span><span class="item-price">$4.00</span></li>
+    <li><span class="item-name">Elbow (Pasta)</span><span class="item-price">$4.00</span></li>
+    <li><span class="item-name">Shrimp</span><span class="item-price">$14.00</span></li>
+    <li><span class="item-name">Octopus</span><span class="item-price">$16.00</span></li>
+    <li><span class="item-name">Chicken</span><span class="item-price">$13.00</span></li>
+  </ul>
+ </section>
+
+
+  <!-- Mariscos -->
+<section id="mariscos" class="menu-section">
+  <h3>Seafood</h3>
+  <ul>
+    <li><span class="item-name">Tomato Sauce Shrimp</span><span class="item-price">$12.00</span></li>
+    <li><span class="item-name">Garlic Sauce Shrimp</span><span class="item-price">$12.00</span></li>
+    <li><span class="item-name">Fried Fish (Whole)</span><span class="item-price">$(preguntar)</span></li>
+    <li><span class="item-name">Fish in Sauce</span><span class="item-price">$12.00</span></li>
+    <li><span class="item-name">Fried Fish Filete</span><span class="item-price">$12.00</span></li>
+    <li><span class="item-name">Cod Stew</span><span class="item-price">$12.00</span></li>
+    <li><span class="item-name">Peppered Cod</span><span class="item-price">$12.00</span></li>
+  </ul>
+</section>
+
 
   <!-- Carnes -->
-<div class="menu-page" id="carnes">
-  <button class="back-btn">← Back</button>
-  <h3>Solo Meats</h3>
+<section id="carnes" class="menu-section">
+  <h3>Meats</h3>
   <ul>
     <li><span class="item-name">Onion Steak</span><span class="item-price">$14.00</span></li>
     <li><span class="item-name">Peppered Steak</span><span class="item-price">$14.00</span></li>
@@ -190,39 +225,14 @@
     <li><span class="item-name">Big Pork</span><span class="item-price">$10.00</span></li>
     <li><span class="item-name">Pork Feet</span><span class="item-price">$10.00</span></li>
   </ul>
-  <div class="scroll-down-arrow">↓</div>
-</div>
+</section>
 
-  <!-- Mariscos -->
-<div class="menu-page" id="mariscos">
-  <button class="back-btn">← Back</button>
-  <h3>Seafood</h3>
-  <ul>
-    <li><span class="item-name">Tomato Sauce Shrimp</span><span class="item-price">$12.00</span></li>
-    <li><span class="item-name">Garlic Sauce Shrimp</span><span class="item-price">$12.00</span></li>
-    <li><span class="item-name">Fried Fish (Whole)</span><span class="item-price">$(preguntar)</span></li>
-    <li><span class="item-name">Fish in Sauce</span><span class="item-price">$12.00</span></li>
-    <li><span class="item-name">Fried Fish Filete</span><span class="item-price">$12.00</span></li>
-    <li><span class="item-name">Cod Stew</span><span class="item-price">$12.00</span></li>
-    <li><span class="item-name">Peppered Cod</span><span class="item-price">$12.00</span></li>
-  </ul>
-</div>
 
-  <!-- Sandwiches -->
-<div class="menu-page" id="sandwiches">
-  <button class="back-btn">← Back</button>
-  <h3>Sandwiches</h3>
-  <ul>
-    <li><span class="item-name">Cuban</span><span class="item-price">$7.00</span></li>
-    <li><span class="item-name">Chicken</span><span class="item-price">$5.00</span></li>
-    <li><span class="item-name">Steak</span><span class="item-price">$5.00</span></li>
-    <li><span class="item-name">Triplet</span><span class="item-price">$8.00</span></li>
-  </ul>
-</div>
+
+
 
   <!-- Sopas -->
-<div class="menu-page" id="sopas">
-  <button class="back-btn">← Back</button>
+<section id="sopas" class="menu-section">
   <h3>Soup</h3>
   <ul>
     <li><span class="item-name">Sancocho (Dominican Stew)</span><span class="item-price">$10.00</span></li>
@@ -234,13 +244,12 @@
     <li><span class="item-name">Seafood & Rice Stew</span><span class="item-price">$15.00</span></li>
     <li><span class="item-name">Shrimp & Rice Stew</span><span class="item-price">$12.00</span></li>
   </ul>
-  <div class="scroll-down-arrow">↓</div>
-</div>
+</section>
+
 
 
   <!-- Bebidas -->
-<div class="menu-page" id="bebidas">
-  <button class="back-btn">← Back</button>
+<section id="bebidas" class="menu-section">
   <h3>Drinks</h3>
 
   <h4>Home-made</h4>
@@ -265,14 +274,12 @@
     <li><span class="item-name">Big Oatmeal</span><span class="item-price">$8.00</span></li>
     <li><span class="item-name">Reg Oatmeal</span><span class="item-price">$4.00</span></li>
   </ul>
-  <div class="scroll-down-arrow">↓</div>
-</div>
+</section>
 
 
   <!-- Picaderas -->
-  <div class="menu-page" id="picaderas">
-  <button class="back-btn">← Back</button>
-    <h3>Picaderas (Appetizer Trays)</h3>
+  <section id="picaderas" class="menu-section">
+    <h3>Appetizer Trays</h3>
     <ul>
       <li> <span class = "item-name">Small</span>
         <span class = "item-price">$35.00</span></li>
@@ -281,12 +288,41 @@
       <li> <span class = "item-name">Big</span>
         <span class="item-price">$80.00</span></li>
     </ul>
-  </div>
-  </div>
-             </section>
+</section>
 
 
-                <script src="script.js"></script>
+
+
+            </section>
+<script>
+  const toggleBtn = document.querySelector('.dropdown-toggle');
+  const dropdown = document.querySelector('.dropdown-list');
+
+  toggleBtn.addEventListener('click', () => {
+    dropdown.classList.toggle('show');
+  });
+
+  // optional: smooth scrolling
+  
+  // smooth scrolling using native scrollTo
+  document.querySelectorAll('.dropdown-list a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      dropdown.classList.remove('show');
+
+      const target = document.querySelector(link.getAttribute('href'));
+      const yOffset = -60; // distance from top
+      const y = target.getBoundingClientRect().top + window.scrollY + yOffset;
+
+      window.scrollTo({
+        top: y,
+      });
+    });
+  });
+</script>
+
+<script src="script.js"></script>
+
 
     </body>
 </html>

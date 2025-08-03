@@ -26,21 +26,19 @@
 }
 
 
-
 html {
   scroll-behavior: smooth;
 }
 
 html, body {
-  min-height: 100%;
-  height: 100%;
-  margin: 0;
+  min-height: 100vh;
+  background-color: transparent; /* ensure no fallback color shows */
 }
 
 
 body {
     font-family : system-ui, sans-serif;
-   background-color: rgb(78, 164, 231);
+
     line-height:1.6;
     margin: 0;
 }
@@ -50,6 +48,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  height: 100vh;
   height: 100svh;
   object-fit: cover;   /* fill entire screen, crop if necessary */
   z-index: -1;         /* stays behind everything */
@@ -80,11 +79,12 @@ body {
   width: 70%;
   height: 3px;
   background-color: #ffffff; /* sleek gray */
-  margin: -2.7rem auto 5.7rem; /* move it closer to the SVG */
+  margin: -2.9rem auto 5.7rem; /* move it closer to the SVG */
   border-radius: 2px;
   opacity: 0.85;
-  margin-bottom: 6.2rem;
+  margin-bottom: 6.3rem;
 }
+
 
 
 /* menu page glow override */
@@ -189,83 +189,7 @@ body.menu-view #main-nav {
 
 
 
-/* ANTOJITOS */
 
-
-
-@keyframes slideInFromRight {
-  from {
-    opacity: 0;
-    transform: translateX(50%) translateY(0);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
-}
-
-body.antojitos-open #antojitos-banner {
-  animation: slideInFromRight 0.9s ease forwards;
-  pointer-events: auto;
-}
-
-/* Ensaladas menu background */
-.menu-page.ensaladas-bg {
-  background-image: url('images/salad-background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color:white;
-  z-index: 1;
-}
-
-.menu-page.ensaladas-bg .item-name,
-.menu-page.ensaladas-bg .item-price {
-  color: white;
-}
-
-.menu-page.ensaladas-bg::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-image: inherit;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.654); /* dark overlay */
-  z-index: -1;
-  transition: background 1s ease-in-out;
-}
-
-/* Desayuno menu Background */
-.menu-page.desayuno-bg {
-  background-image: url('images/flag.png');
-  background-size: 100%;
-  background-position: center -80px;
-  background-repeat: no-repeat;
-  color: rgb(255, 234, 0);
-  z-index: 1;
-}
-
-.menu-page.desayuno-bg .item-name,
-.menu-page.desayuno-bg .item-price {
-  color: rgb(0, 0, 0);
-}
-
-.menu-page.desayuno-bg::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-image: inherit;
-  background-size: 100%;
-  background-position: center -80px;
-  background-repeat: no-repeat;
-  background-color: rgba(255, 255, 255, 0.5); /* dark overlay for readability */
-  z-index: -1;
-  transition: background 1s ease-in-out;
-}
 
 
 
@@ -417,11 +341,14 @@ section h2 {
 
 #menu {
   position: relative; /* allows absolutely positioned children to anchor to this section */
+  padding-bottom: 2rem;
 }
+
+
 
 .menu-heading {
   position: relative;
-  margin-top: -3.45rem; /* or try -2rem if needed */
+  margin-top: -3.4rem; /* or try -2rem if needed */
   margin-bottom:3rem;
   text-align: center;
   font-size: 2rem; /* tweak for size if you want */
@@ -436,6 +363,10 @@ text-shadow:
     -1px -1px 4px rgba(0, 0, 0, 0.735);
 
 }
+
+
+
+
 #home-btn {
   position: absolute;
   top: -2.4rem;     /* adjust distance from the top of menu header */
@@ -476,17 +407,16 @@ border-radius: 1rem;
 
 .menu-dropdown {
   position: sticky; /* stick while scrolling */
-  top: 0.5rem; /* final resting spot near the top */
+  top: .8rem; /* final resting spot near the top */
   margin-top: -3rem;
   inset-inline: 0;
   margin-inline: auto;
   width: fit-content;
   z-index: 1000;
   text-align: center;
-  
   display: block;
   justify-content: center;
-
+margin-bottom: -1.2rem;
   opacity: 0;                 /* start hidden */
   animation: fadeSlideDown 0.7s ease forwards;
   animation-delay: 0.55s;      /* slight delay if you want */
@@ -505,7 +435,7 @@ border-radius: 1rem;
 
 
 .menu-dropdown .dropdown-toggle {
-  background-color: rgb(199, 8, 8); /* light background */
+  background-color: rgb(201, 0, 0); /* light background */
   padding: 0.5rem;
   border-radius: 50%; /* perfect circle */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.176);
@@ -615,23 +545,6 @@ margin-top: 0.5rem;
 
 
 
-.menu-heading {
-  position: relative;
-  margin-top: -3.45rem; /* or try -2rem if needed */
-  margin-bottom:3rem;
-  text-align: center;
-  font-size: 2rem; /* tweak for size if you want */
-  font-style:italic;
-  animation: fadeSlideUp 0.6s ease-out forwards;
-  animation-delay: 0.2s;
-  opacity: 0;
-  color: rgb(255, 213, 26);
-
-text-shadow: 
-    1px 1px 3px rgba(0, 0, 0, 0.774),
-    -1px -1px 4px rgba(0, 0, 0, 0.735);
-
-}
 
 #main-nav a:hover {
   color: #FFD700; /* warm yellow on hover */
@@ -668,18 +581,28 @@ text-shadow:
   text-decoration: underline;
 }
 
+
 .menu-section {
   width: 90%;
-  max-width: 800px;
+  max-width: 700px;
   padding: 1rem;
-  margin: 2rem 0;
-  background: #c2bfb5;
+  padding-top: 0.1rem;
+  padding-bottom: 3rem;           /* was 1rem – adds more breathing room */
+  margin: 1.8rem auto;       /* centers horizontally */
+  background: #ed7322;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  min-height: 200px;       /* optional: force them a bit taller */
+
   opacity: 0;                 /* start invisible */
   transform: translateY(30px); /* slightly shifted down */
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
+
+
+
+
+
 .menu-section.visible {
   opacity: 1;
   transform: translateY(0);
@@ -731,7 +654,7 @@ text-shadow:
 .menu-section h3,
 .menu-section h4 {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
@@ -742,16 +665,7 @@ text-shadow:
   color: #515151;
 }
 
-.menu-section {
-  padding-top: 0.2rem;
-  padding-bottom: 3rem;           /* was 1rem – adds more breathing room */
-  margin: 1rem auto;       /* centers horizontally */
-  background: #ed7322;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  max-width: 100%;          /* keep a consistent width */
-  min-height: 200px;       /* optional: force them a bit taller */
-}
+
 
 .menu-section h3 {
   font-size: 1.7rem;
@@ -1093,8 +1007,6 @@ color: rgb(237, 24, 0);
   min-height: 1.5em;
   font-family: 'Poppins', sans serif;
   background-color: rgba(255, 0, 0, 0);
-   
-
 }
 
 
@@ -1112,7 +1024,7 @@ color: rgb(237, 24, 0);
   min-height: 90px;
   width: 100%;
   position: relative;
-  top: -0.5rem;
+  top: -.5rem;
   padding-top: 1rem;
 }
 
