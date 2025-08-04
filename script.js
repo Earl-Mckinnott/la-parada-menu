@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const phrases = [
 "𓂃 ོ⋆☀︎𓂃",
   "Bienvenido a",
-  "la Parada del Sabor",
+  "la Parada del Sabor.",
   "Comida casera.",
   "Tu lugar favorito",
   "en Allentown.",
