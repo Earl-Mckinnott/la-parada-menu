@@ -38,7 +38,7 @@ html, body {
 
 body {
     font-family : system-ui, sans-serif;
-background-color: rgb(113, 153, 222);
+background-color: #4d643a;
     line-height:1.6;
     margin: 0;
 }
@@ -292,32 +292,38 @@ body.menu-view #main-nav {
 }
 
 .contact-heading {
-   position: relative;
-  margin-top: -2rem;       /* adjust upward/downward */
+  position: relative;
+  margin-top: -3.4rem; /* or try -2rem if needed */
+  margin-bottom:1rem;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem; /* tweak for size if you want */
   font-style:italic;
+  animation: fadeSlideUp 0.6s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+  color: rgb(255, 213, 26);
+
+text-shadow: 
+    1px 1px 3px rgba(0, 0, 0, 0.774),
+    -1px -1px 4px rgba(0, 0, 0, 0.735);
+
 }
 
 .contact-content {
-  margin-top: 3rem;
+  margin-top: 5rem;
+  font-size: 24px;
+  font-weight: 900;
+  color: rgb(255, 242, 228);
+  text-align: center;
+ letter-spacing: 2px;
+  text-shadow:
+    4px 4px 1px rgba(0, 0, 0, 0.6),
+    2px 2px 1px rgba(0, 0, 0, 0.5);
 }
 
 
 
-body.contact-view #home-btn {
-  position: absolute;
-  top: -2.5rem;            /* adjust to sit just above the heading */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 30px;
-  height: 30px;
-  background-image: url('images/home-icon.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: none;
-  text-indent: -9999px;
-}
+
 
 .jobs-page #main-nav {
   margin-top: -4.5rem;
@@ -851,7 +857,7 @@ body.home #logo {
   display: flex;
   width: max-content;
   will-change: transform;
-  gap :16px;
+  gap :17px;
 }
 
 .gallery-track img {
@@ -859,7 +865,7 @@ body.home #logo {
   width: 174px;
   flex-shrink: 0 0 auto;
   object-fit: contain;
-  border: 3.5px solid rgb(255, 255, 255);
+  border: 3.5px solid rgb(177, 9, 9);
   box-sizing: border-box;
   border-radius: 20px;
 }
@@ -953,7 +959,7 @@ body.home #logo {
   left: 0;
   width: 100%;
   height: 100vh;  /* force it to fill the whole screen */
-  background-color: #F7C548;
+  background-color: #ffcd4e;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -962,7 +968,7 @@ body.home #logo {
 
 
 #splash-screen.reveal {
-  clip-path: circle(0% at 50% 45%);
+  clip-path: circle(0% at 50% 46%);
   opacity: 0;
 }
 
@@ -970,7 +976,7 @@ body.home #logo {
 .enter-text {
   font-size: 2.5rem;
   font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', system-ui, sans-serif;
-  color: #C1121F;
+  color: #cc111e;
   cursor: pointer;
   transition: transform 0.3s ease;
   display: flex;
@@ -991,7 +997,7 @@ body.home #logo {
 .enter-text span:nth-child(2) {
 font-size: 2rem;
 margin-top: -1rem;
-color:#2f6a05;
+color:#337604;
 }
 
 .enter-text span:nth-child(3) {
