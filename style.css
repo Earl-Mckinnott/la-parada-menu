@@ -743,7 +743,7 @@ margin-top: 0.5rem;
 }
 
 #logo-wrapper {
-  transform: scale(0.75);
+  transform: translateX(-4.3px) scale(0.75);
   transform-origin: center top;
 }
 
@@ -1063,6 +1063,7 @@ color:#337604;
 .logo-flags .flag-right {
   max-width: 51px;
   margin-left: -3rem;
+  transform: translate(-4.5px, -60px);
 }
 
 .logo-flags img.flag-left,
@@ -1075,6 +1076,12 @@ color:#337604;
   flex: 0 0 auto; /* prevents it from stretching weirdly */
 }
 
+.logo-flags img.flag-left {
+  max-width: 60px;
+  height: auto;
+}
+
+
 
 
 
@@ -1085,7 +1092,7 @@ color:#337604;
 }
 
  .flag-placeholder-left {
-  width: 55px;
+  width: 60px;
   margin-right: -3rem;
 }
 .flag-placeholder-right {
