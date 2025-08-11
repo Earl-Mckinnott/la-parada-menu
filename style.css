@@ -652,9 +652,10 @@ margin-top: 0.5rem;
 .menu-description {
   font-size: 0.95rem;
   text-align: center;
-  color: #fff700;
+  color: #ffee00e4;
   margin: 0.3rem 0 0.6rem;
   line-height: 1.5;
+  font-weight: 600;
 }
 
 .menu-section h3,
@@ -675,11 +676,12 @@ margin-top: 0.5rem;
 
 .menu-section h3 {
   font-size: 1.7rem;
-  font-weight: 600;
-  color: rgb(255, 247, 0);
+  font-weight: 900;
+  color: rgb(255, 225, 0);
   border-bottom: 2px solid #efb105;
   padding-bottom: 0.9rem;
-  
+  text-shadow: 1px 2px 0px rgb(0, 0, 0);
+  letter-spacing: 1.2px;
 }
 
 
